@@ -1,0 +1,16 @@
+[
+  {
+    "titulo": "Concierto de Jazz",
+    "fecha": "2025-10-10",
+    "hora": "6:00 PM",
+    "lugar": "Auditorio Principal",
+    "descripcion": "Un recorrido por el jazz contemporáneo."
+  },
+  {
+    "titulo": "Exposición de Arte",
+    "fecha": "2025-10-15",
+    "hora": "3:00 PM",
+    "lugar": "Sala de Arte UAO",
+    "descripcion": "Muestra de artistas locales emergentes."
+  }
+]
