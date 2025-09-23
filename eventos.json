@@ -1,16 +1,18 @@
 [
   {
     "titulo": "Concierto de Jazz",
-    "fecha": "2025-10-10",
-    "hora": "6:00 PM",
-    "lugar": "Auditorio Principal",
-    "descripcion": "Un recorrido por el jazz contemporáneo."
+    "descripcion": "Una noche de jazz en vivo con artistas locales.",
+    "fecha": "2025-10-05",
+    "hora": "7:00 PM",
+    "lugar": "Auditorio UAO",
+    "imagen": "https://picsum.photos/400/200?random=1"
   },
   {
     "titulo": "Exposición de Arte",
-    "fecha": "2025-10-15",
-    "hora": "3:00 PM",
+    "descripcion": "Obras de estudiantes de Bellas Artes.",
+    "fecha": "2025-10-10",
+    "hora": "10:00 AM",
     "lugar": "Sala de Arte UAO",
-    "descripcion": "Muestra de artistas locales emergentes."
+    "imagen": "https://picsum.photos/400/200?random=2"
   }
 ]

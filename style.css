@@ -1,10 +1,280 @@
+/* ---------------------- */
+/* Fuente global */
+/* ---------------------- */
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 20px;
+  background: #fafafa;
+  color: #333;
+  overflow-x: hidden; /* evita scroll horizontal */
 }
 
-h1 {
-  color: #b80000; /* rojo UAO */
+/* ---------------------- */
+/* Fondo de la página */
+/* ---------------------- */
+#page-content {
+  padding: 45px;
+  margin-left: 0;
+  background: #fafafa;
+  transition: margin-left 0.3s ease, opacity 0.25s ease;
+  opacity: 1;
+}
+
+#page-content.fade-out { opacity: 0; }
+#page-content.fade-in { opacity: 1; }
+
+/* ---------------------- */
+/* Fondo borroso cuando el modal está activo */
+/* ---------------------- */
+.overlay.active ~ #page-content {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+/* ---------------------- */
+/* Overlay modal */
+/* ---------------------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ---------------------- */
+/* Tarjeta emergente modal */
+/* ---------------------- */
+.custom-card {
+  background: #F7F7F7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 420px;
+  text-align: center;
+}
+
+.custom-card h2 {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------- */
+/* Estilos del cajón de navegación */
+/* ---------------------- */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin: 16px;
+  color: #333;
+  z-index: 1200;
+  position: relative;
+}
+
+.drawer {
+  position: fixed;
+  top: 60px;
+  left: -320px;
+  width: 280px;
+  height: calc(100% - 60px);
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transition: left 0.3s ease;
+  padding: 16px;
+  z-index: 1100;
+}
+
+.drawer.open { left: 0; }
+
+#page-content.shifted {
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+}
+
+.drawer-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 12px 0 4px;
+}
+
+.drawer hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 8px 0;
+}
+
+.drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+.drawer-item:hover {
+  background: rgba(155, 39, 176, 0.1);
+}
+
+.drawer-item.active {
+  background: rgba(155, 39, 176, 0.2);
+  font-weight: bold;
+  color: #6a1b9a;
+}
+
+/* ---------------------- */
+/* Título de sección */
+/* ---------------------- */
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+/* ---------------------- */
+/* Contenedor horizontal de filtros */
+/* ---------------------- */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  height: calc(100vh - 140px); /* ocupa toda la altura menos header */
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 6px;
+}
+
+/* ---------------------- */
+/* Tarjetas de filtros (carrusel) */
+/* ---------------------- */
+.event-card {
+  flex: 0 0 22%;
+  height: 42%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+/* Outlines y colores por tarjeta de filtros */
+.event-card:nth-child(1) { outline: 3px solid #e91e63; } /* rosa */
+.event-card:nth-child(2) { outline: 3px solid #3f51b5; } /* azul */
+.event-card:nth-child(3) { outline: 3px solid #009688; } /* verde */
+.event-card:nth-child(4) { outline: 3px solid #ff9800; } /* naranja */
+.event-card:nth-child(5) { outline: 3px solid #9c27b0; } /* morado */
+.event-card:nth-child(6) { outline: 3px solid #607d8b; } /* gris azulado */
+
+/* Colores de los iconos por tarjeta de filtros */
+.event-card:nth-child(1) .material-symbols-outlined { color: #e91e63; }
+.event-card:nth-child(2) .material-symbols-outlined { color: #3f51b5; }
+.event-card:nth-child(3) .material-symbols-outlined { color: #009688; }
+.event-card:nth-child(4) .material-symbols-outlined { color: #ff9800; }
+.event-card:nth-child(5) .material-symbols-outlined { color: #9c27b0; }
+.event-card:nth-child(6) .material-symbols-outlined { color: #607d8b; }
+
+.event-card .material-symbols-outlined {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.event-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* ---------------------- */
+/* Tarjetas de eventos (Material Card) */
+/* ---------------------- */
+#events-list .event-card {
+  flex: 0 0 22%; /* tarjetas más estrechas */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none; /* quitar outline */
+  min-height: 220px; /* altura más compacta */
+}
+
+#events-list .event-card:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#events-list .event-card img {
+  width: 100%;
+  height: 100px; /* imagen más pequeña */
+  object-fit: cover;
+}
+
+#events-list .event-card .card-content {
+  padding: 8px 10px; /* menos padding */
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* menor separación entre elementos */
+}
+
+#events-list .event-card .card-content h3 {
+  font-size: 14px; /* texto más pequeño */
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+#events-list .event-card .card-content p {
+  font-size: 12px; /* texto más pequeño */
+  margin: 0;
+  color: #555;
+  line-height: 1.2; /* acomoda mejor el texto */
+}
+
+#events-list .event-card .card-content .material-symbols-outlined {
+  font-size: 20px; /* icono más pequeño */
+  color: #6a1b9a;
+  margin-bottom: 4px;
 }
