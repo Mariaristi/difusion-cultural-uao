@@ -46,6 +46,9 @@ Promise.all([
   eventosFiltro = filtros;
   eventosDetalle = detalles;
 
+  // Llenar eventosMostrados con todos los eventos al inicio
+  eventosMostrados = eventosDetalle;
+
   // Actualizar cantidades dinámicamente
   eventosFiltro.forEach(filtro => {
     const cantidad = eventosDetalle.filter(ev => ev.clase === filtro.clase).length;
@@ -53,6 +56,9 @@ Promise.all([
   });
 
   renderFiltroCards();
+
+  // Renderizar todos los eventos al inicio
+  renderEventos(eventosMostrados);
 });
 
 // Renderizar tarjetas de filtro
@@ -91,7 +97,7 @@ function renderEventos(lista, container = filteredContainer) {
   if (lista.length === 0) {
     container.innerHTML = `
       <div class="no-results">
-        <p>No se encontró nada con tu busqueda</p>
+        <p>No se encontró nada con tu busqueda.</p>
       </div>
     `;
     return;
@@ -117,17 +123,19 @@ function renderEventos(lista, container = filteredContainer) {
   });
 }
 
-// Búsqueda en vivo
+// Búsqueda en vivo sobre TODOS los eventos
 const searchInput = document.querySelector(".search-container input");
 searchInput.addEventListener("input", e => {
   const query = e.target.value.toLowerCase();
 
+  let listaAFiltrar = eventosDetalle; // TODOS los eventos
+
   if (!query) {
-    renderEventos(eventosMostrados);
+    renderEventos(listaAFiltrar);
     return;
   }
 
-  const filtrados = eventosMostrados.filter(ev =>
+  const filtrados = listaAFiltrar.filter(ev =>
     ev.titulo.toLowerCase().includes(query) ||
     ev.descripcion.toLowerCase().includes(query) ||
     ev.fecha.toLowerCase().includes(query) ||
@@ -149,7 +157,6 @@ filteredContainer.addEventListener("click", e => {
     const evento = eventosMostrados.find(ev => ev.titulo === titulo);
 
     if (e.target.classList.contains("active")) {
-      // Agregar a favoritos si no está
       if (evento && !favoritos.includes(evento)) {
         favoritos.push(evento);
 
@@ -159,7 +166,6 @@ filteredContainer.addEventListener("click", e => {
         preferenciasContainer.appendChild(clone);
       }
     } else {
-      // Quitar de favoritos
       favoritos = favoritos.filter(ev => ev.titulo !== titulo);
 
       // Quitar tarjeta de Mis preferencias
