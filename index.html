@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <!-- Fuente Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Material Symbols -->
+  <!-- Material Symbols (incluye ícono de corazón) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
   <!-- Archivo de estilos -->
@@ -16,14 +16,13 @@
 </head>
 <body>
 
-  <!-- Drawer -->
+  <!-- Drawer izquierdo -->
   <nav class="drawer" id="drawer">
     <div class="drawer-logo">
       <span class="uao">uao</span>
       <span class="cultural">Cultural</span>
     </div>
- 
-    <hr> 
+    <hr>
     <h3>Inicio</h3>
     <ul>
       <li class="drawer-item active" data-target="eventos">
@@ -31,6 +30,7 @@
       </li>
       <li class="drawer-item" data-target="preferencias">
         <span class="material-symbols-outlined">favorite</span> Mis preferencias
+
       </li>
       <li class="drawer-item" data-target="calendario">
         <span class="material-symbols-outlined">calendar_month</span> Calendario
@@ -45,81 +45,74 @@
     </ul>
   </nav>
 
-  <!-- Contenido principal -->
-  <div id="page-content">
-    <!-- Barra superior con búsqueda -->
-    <header id="header">
-      <span class="material-symbols-outlined menu-icon" id="menu-btn">menu</span>
-      <div class="search-container">
-        <span class="material-symbols-outlined">search</span>
-        <input type="text" placeholder="Buscar eventos...">
+  <!-- Contenedor principal -->
+  <div id="page-wrapper">
+    <div id="page-content">
+      <!-- Barra superior con búsqueda -->
+      <header id="header">
+        <span class="material-symbols-outlined menu-icon" id="menu-btn">menu</span>
+        <div class="search-container">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="Buscar eventos...">
+        </div>
+      </header>
+
+      <!-- Escenas -->
+      <div class="scene active" id="scene-eventos">
+        <div class="dashboard">
+          <h1 class="scene-title">Eventos</h1>
+          <p class="scene-subtitle intro">
+            Descubre la oferta cultural de la UAO.
+          </p>
+          <p class="scene-subtitle detalle">
+            Participa en conciertos, talleres, cine-foros y exposiciones pensadas para enriquecer tu experiencia universitaria.  
+            ¡Vive la cultura, conecta con tu comunidad y sé parte de cada evento!
+          </p>
+
+          <!-- Contenedor de tarjetas con botones de scroll -->
+          <div class="event-cards" id="cards-container"></div>
+          <!-- Tarjetas largas filtradas -->
+          <div id="filtered-events" class="filtered-events"></div>
+        </div>
       </div>
-    </header>
 
-    <!-- Escenas -->
-    <div class="scene active" id="scene-eventos">
-      <div class="dashboard">
-        <h1 class="scene-title">Eventos</h1>
-
-        <!-- Primer texto con línea -->
-        <p class="scene-subtitle intro">
-          Descubre la oferta cultural de la UAO.
-        </p>
-
-        <!-- Segundo texto -->
-        <p class="scene-subtitle detalle">
-          Participa en conciertos, talleres, cine-foros y exposiciones pensadas para enriquecer tu experiencia universitaria.  
-          ¡Vive la cultura, conecta con tu comunidad y sé parte de cada evento!
-        </p>
+      <div class="scene" id="scene-preferencias">
+        <div class="dashboard">
+          <h1 class="scene-title">Mis preferencias</h1>
+          <p class="scene-subtitle detalle">
+            Marca tus favoritos
+          </p>
+          <p class="scene-subtitle">Aquí están los eventos que más te interesan. Explora cada uno, descubre nuevas experiencias y no te pierdas nada de lo que la UAO tiene para ti.</p>
+          <div id="preferencias-container"></div> <!-- contenedor para tarjetas -->
+        </div>
       </div>
-    </div>
 
-    <div class="scene" id="scene-preferencias">
-      <div class="dashboard">
-        <h1 class="scene-title">Mis preferencias</h1>
-        <p class="scene-subtitle">Configura tus gustos aquí.</p>
-      </div>
-    </div>
 
-    <div class="scene" id="scene-calendario">
-      <div class="dashboard">
-        <h1 class="scene-title">Calendario</h1>
-        <p class="scene-subtitle">Visualiza los próximos eventos aquí.</p>
-      </div>
-    </div>
 
-    <div class="scene" id="scene-configuracion">
-      <div class="dashboard">
-        <h1 class="scene-title">Configuración</h1>
-        <p class="scene-subtitle">Ajustes de la aplicación.</p>
+      <div class="scene" id="scene-calendario">
+        <div class="dashboard">
+          <h1 class="scene-title">Calendario</h1>
+          <p class="scene-subtitle">Visualiza los próximos eventos aquí.</p>
+        </div>
       </div>
+
+      <div class="scene" id="scene-configuracion">
+        <div class="dashboard">
+          <h1 class="scene-title">Configuración</h1>
+          <p class="scene-subtitle">Ajustes de la aplicación.</p>
+        </div>
+      </div>
+
+      <!-- Panel derecho fijo -->
+      <aside class="right-panel" id="right-panel">
+        <h3>Panel Derecho</h3>
+        <p>(Aquí irá contenido dinámico)</p>
+      </aside>
     </div>
   </div>
 
-  <script>
-    // Toggle del drawer
-    const drawer = document.getElementById("drawer");
-    const menuBtn = document.getElementById("menu-btn");
-    const pageContent = document.getElementById("page-content");
-    const header = document.getElementById("header");
+  <!-- Scripts -->
+  <script type="module" src="app.js"></script>
 
-    menuBtn.addEventListener("click", () => {
-      drawer.classList.toggle("closed");
-      pageContent.classList.toggle("shifted");
-      header.classList.toggle("shifted");
-    });
-
-    // Cambiar escenas
-    document.querySelectorAll(".drawer-item").forEach(item => {
-      item.addEventListener("click", () => {
-        document.querySelectorAll(".drawer-item").forEach(el => el.classList.remove("active"));
-        item.classList.add("active");
-
-        document.querySelectorAll(".scene").forEach(scene => scene.classList.remove("active"));
-        const destino = item.getAttribute("data-target");
-        document.getElementById("scene-" + destino).classList.add("active");
-      });
-    });
-  </script>
 </body>
 </html>

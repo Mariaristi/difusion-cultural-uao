@@ -1,0 +1,101 @@
+[
+  {
+    "clase": "musica",
+    "titulo": "Concierto UAO Jazz",
+    "descripcion": "Disfruta de la mejor música jazz en vivo",
+    "fecha": "05/10/2025",
+    "hora": "1:00 PM",
+    "lugar": "Auditorio Principal",
+    "imagen": "https://source.unsplash.com/120x120/?jazz,music"
+  },
+  {
+    "clase": "musica",
+    "titulo": "Recital de piano",
+    "descripcion": "Piezas clásicas interpretadas por alumnos",
+    "fecha": "6/10/2025",
+    "hora": "6:30 PM",
+    "lugar": "Sala de Conciertos",
+    "imagen": "https://source.unsplash.com/120x120/?piano,music"
+  },
+  {
+    "clase": "musica",
+    "titulo": "Batalla de Rap",
+    "descripcion": "Competencia de rap entre alumnos",
+    "fecha": "12/10/2025",
+    "hora": "2:00 PM",
+    "lugar": "Bienestar UAO",
+    "imagen": "https://source.unsplash.com/120x120/?rap,music"
+  },
+  {
+    "clase": "arte",
+    "titulo": "Exposición de pintura moderna",
+    "descripcion": "Obras de artistas locales contemporáneos",
+    "fecha": "26/9/2025",
+    "hora": "10:00 AM",
+    "lugar": "Galería Central",
+    "imagen": "https://source.unsplash.com/120x120/?painting,art"
+  },
+  {
+    "clase": "arte",
+    "titulo": "Taller de escultura",
+    "descripcion": "Aprende técnicas básicas de escultura",
+    "fecha": "28/9/2025",
+    "hora": "3:00 PM",
+    "lugar": "Taller de Arte",
+    "imagen": "https://source.unsplash.com/120x120/?sculpture,art"
+  },
+  {
+    "clase": "teatro",
+    "titulo": "Obra de teatro",
+    "descripcion": "Presentación de obra local",
+    "fecha": "18/10/2025",
+    "hora": "5:00 PM",
+    "lugar": "Galería Central",
+    "imagen": "https://source.unsplash.com/120x120/?theater,stage"
+  },
+  {
+    "clase": "baile",
+    "titulo": "Concierto de Salsa",
+    "descripcion": "Disfruta del ritmo de la salsa",
+    "fecha": "08/11/2025",
+    "hora": "7:30 AM",
+    "lugar": "Gimnasio",
+    "imagen": "https://source.unsplash.com/120x120/?salsa,dance"
+  },
+  {
+    "clase": "cultura",
+    "titulo": "Exposición de ciencia moderna",
+    "descripcion": "Descubre los avances científicos actuales",
+    "fecha": "28/10/2025",
+    "hora": "11:00 AM",
+    "lugar": "Galería Central",
+    "imagen": "https://source.unsplash.com/120x120/?science,culture"
+  },
+  {
+    "clase": "literatura",
+    "titulo": "Huso de la palabra",
+    "descripcion": "Evento literario y lectura de poemas",
+    "fecha": "08/11/2025",
+    "hora": "4:00 PM",
+    "lugar": "Auditorio...",
+    "imagen": "https://source.unsplash.com/120x120/?books,literature"
+  },
+   {
+    "clase": "literatura",
+    "titulo": "Huso de la palabra",
+    "descripcion": "Evento literario y lectura de poemas",
+    "fecha": "08/11/2025",
+    "hora": "4:00 PM",
+    "lugar": "Auditorio...",
+    "imagen": "https://source.unsplash.com/120x120/?books,literature"
+  },
+   {
+    "clase": "literatura",
+    "titulo": "Huso de la palabra",
+    "descripcion": "Evento literario y lectura de poemas",
+    "fecha": "08/11/2025",
+    "hora": "4:00 PM",
+    "lugar": "Auditorio...",
+    "imagen": "https://source.unsplash.com/120x120/?books,literature"
+  }
+]

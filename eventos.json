@@ -1,18 +1,39 @@
 [
   {
-    "titulo": "Concierto de Jazz",
-    "descripcion": "Una noche de jazz en vivo con artistas locales.",
-    "fecha": "2025-10-05",
-    "hora": "7:00 PM",
-    "lugar": "Auditorio UAO",
-    "imagen": "https://picsum.photos/400/200?random=1"
+    "clase": "musica",
+    "titulo": "Música",
+    "descripcion": "Conciertos y recitales que harán vibrar tus sentidos",
+    "cantidad": 10
   },
   {
-    "titulo": "Exposición de Arte",
-    "descripcion": "Obras de estudiantes de Bellas Artes.",
-    "fecha": "2025-10-10",
-    "hora": "10:00 AM",
-    "lugar": "Sala de Arte UAO",
-    "imagen": "https://picsum.photos/400/200?random=2"
+    "clase": "arte",
+    "titulo": "Arte",
+    "descripcion": "Exposiciones y talleres para despertar tu creatividad",
+    "cantidad": 10
+  },
+  {
+    "clase": "baile",
+    "titulo": "Baile",
+    "descripcion": "Clases y presentaciones de diversos ritmos",
+    "cantidad": 10
+  },
+  {
+    "clase": "teatro",
+    "titulo": "Teatro",
+    "descripcion": "Obras y dramatizaciones llenas de emoción",
+    "cantidad": 10
+  },
+  {
+    "clase": "cultura",
+    "titulo": "Cultura",
+    "descripcion": "Charlas y actividades que enriquecen tu conocimiento",
+    "cantidad": 10
+  },
+  {
+    "clase": "literatura",
+    "titulo": "Literatura",
+    "descripcion": "Clubes y lecturas que inspiran nuevas ideas",
+    "cantidad": 10
   }
+
 ]
