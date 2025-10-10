@@ -769,6 +769,7 @@ header .search-container .material-symbols-outlined {
 #page-content.shifted #uao-calendar {
   width: calc(100% - 260px);
   transition: width 0.3s ease;
+  transform: translate(60px, -53px); 
 }
 
 /* Encabezado del calendario (botones y título) */
@@ -828,22 +829,6 @@ header .search-container .material-symbols-outlined {
   font-size: 0.8rem;
 }
 
-/* === Eventos === */
-.fc-event {
-  border-radius: 10px;
-  background-color: #ff730076 !important;
-  color: white !important;
-  border: none !important;
-  padding: 2px 6px;
-  font-size: 0.8rem;
-  transition: transform 0.2s ease;
-}
-
-.fc-event:hover {
-  transform: scale(1.05);
-}
-
-
 /* Oculta los textos en inglés que vienen por defecto */
 .fc-dayGridMonth-button .fc-button-label,
 .fc-timeGridWeek-button .fc-button-label,
@@ -882,10 +867,10 @@ header .search-container .material-symbols-outlined {
   }
 }
 
-/* === Mejoras visuales para eventos === */
+/* Mejoras visuales para eventos */
 .fc-daygrid-event, .fc-timegrid-event {
   border-radius: 12px !important;
-  background: linear-gradient(135deg, #be0d0d66, #ff000091) !important;
+  background: radial-gradient(circle at center, #be0d0dbf 30%, #ff0000d3 100%) !important;
   color: #fff !important;
   border: none !important;
   font-size: 0.9rem !important;
@@ -895,10 +880,10 @@ header .search-container .material-symbols-outlined {
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  white-space: normal !important; /* ✅ permite saltos de línea */
-  word-break: break-word !important; /* ✅ divide palabras largas */
+  white-space: normal !important; /*permite saltos de línea */
+  word-break: break-word !important; /*divide palabras largas */
   line-height: 1.3 !important;
-  overflow: visible !important; /* ✅ evita cortes */
+  overflow: visible !important; /* evita cortes */
   min-height: 55px !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease;
@@ -906,7 +891,7 @@ header .search-container .material-symbols-outlined {
 
 .fc-event:hover {
   transform: scale(1.05);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.155);
 }
 
 /* Ajusta cómo se muestran hora y título dentro del evento */
@@ -920,4 +905,42 @@ header .search-container .material-symbols-outlined {
   font-size: 0.85rem !important;
   line-height: 1.2 !important;
   white-space: normal !important;
+}
+
+
+/* === Modal emergente para detalle de evento === */
+.evento-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.evento-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.evento-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s;
+}
+
+.evento-modal-close:hover {
+  color: #9b0101;
 }

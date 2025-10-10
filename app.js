@@ -122,6 +122,14 @@ function renderEventos(lista, container = filteredContainer) {
         <p class="event-location">Lugar: ${ev.lugar}</p>
       </div>
     `;
+
+    // 👇 Agregamos el listener para abrir el modal
+div.addEventListener('click', (e) => {
+  // Evitar que el click en el corazón active el modal
+  if(e.target.classList.contains('favorite-icon')) return;
+
+  abrirModalEvento(ev);
+});
     container.appendChild(div);
   });
 }
@@ -189,3 +197,36 @@ function showMisPreferencias() {
   }
   renderEventos(favoritos, preferenciasContainer);
 }
+
+// === FUNCIONALIDAD DEL MODAL DE EVENTO ===
+
+// Función que abre el modal con la información del evento
+export function abrirModalEvento(evento) {
+  const modal = document.getElementById("evento-modal");
+  const modalBody = document.getElementById("evento-modal-body");
+
+  if (!modal || !modalBody) return;
+
+  modalBody.innerHTML = `
+    <h2>${evento.titulo}</h2>
+    <p><strong>Hora:</strong> ${evento.hora}</p>
+    <p><strong>Fecha:</strong> ${evento.fecha}</p>
+    <p><strong>Lugar:</strong> ${evento.lugar}</p>
+    <p><strong>Descripción:</strong> ${evento.descripcion}</p>
+    <p><strong>Categoría:</strong> ${evento.clase}</p>
+  `;
+
+  modal.style.display = "flex";
+}
+
+// Cerrar el modal al hacer clic en la X o fuera del contenido
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("evento-modal");
+  if (!modal) return;
+
+  if (e.target.classList.contains("evento-modal-close") || e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+

@@ -1,9 +1,11 @@
 // calendar.js
+import { abrirModalEvento } from './app.js'; // 👈 Importa la función que abrirá el modal en cualquier escena
+
 export function initCalendar(events = []) {
   const container = document.querySelector('#scene-calendario .dashboard');
   if (!container) return;
 
-  // Crear contenedor
+  // Crear contenedor del calendario
   const calDiv = document.createElement('div');
   calDiv.id = 'uao-calendar';
   container.appendChild(calDiv);
@@ -40,50 +42,58 @@ export function initCalendar(events = []) {
       return dias[arg.date.getUTCDay()];
     },
 
+    eventContent: function(arg) {
+      const hora = arg.event.extendedProps.hora || '';
+      const titulo = arg.event.title || '';
+
+      const horaEl = document.createElement('div');
+      horaEl.classList.add('fc-event-time');
+      horaEl.innerText = hora;
+
+      const tituloEl = document.createElement('div');
+      tituloEl.classList.add('fc-event-title');
+      tituloEl.innerText = titulo;
+
+      return { domNodes: [horaEl, tituloEl] };
+    },
+
     eventDisplay: 'block',
     eventMinHeight: 50,
 
-    eventContent: function(arg) {
-    const hora = arg.event.extendedProps.hora || '';
-    const titulo = arg.event.title || '';
+    events: events.map(ev => ({
+      title: ev.titulo,
+      start: convertirFecha(ev.fecha, ev.hora),
+      extendedProps: {
+        hora: ev.hora,
+        descripcion: ev.descripcion,
+        lugar: ev.lugar,
+        clase: ev.clase
+      }
+    })),
 
-    const horaEl = document.createElement('div');
-    horaEl.classList.add('fc-event-time');
-    horaEl.innerText = hora; // hora arriba
-
-    const tituloEl = document.createElement('div');
-    tituloEl.classList.add('fc-event-title');
-    tituloEl.innerText = titulo; // título debajo
-
-    return { domNodes: [horaEl, tituloEl] };
-  },
-
-  events: events.map(ev => ({
-    title: ev.titulo,
-    start: convertirFecha(ev.fecha, ev.hora),
-    extendedProps: {
-      hora: ev.hora,
-      descripcion: ev.descripcion,
-      lugar: ev.lugar,
-      clase: ev.clase
-    }
-  })),
-
-
+    // 👇 Aquí reemplazamos tu eventClick por el que llama a abrirModalEvento()
     eventClick: function(info) {
-      const titulo = encodeURIComponent(info.event.title);
-      window.location.href = `detalle-evento.html?titulo=${titulo}`;
+      const props = info.event.extendedProps;
+
+      abrirModalEvento({
+        titulo: info.event.title,
+        hora: props.hora,
+        fecha: info.event.start.toLocaleDateString(),
+        lugar: props.lugar,
+        descripcion: props.descripcion,
+        clase: props.clase
+      });
     }
-  });
+  }); // ← Cierre de FullCalendar.Calendar
 
   calendar.render();
-}
+} // ← Cierre de initCalendar
 
 // Conversión dd/mm/yyyy → formato ISO
 function convertirFecha(fechaStr, horaStr = '00:00') {
   const [d, m, y] = fechaStr.split('/');
-  let [hora, periodo] = horaStr.split(' ');
-  let [h, min] = hora.split(':');
+  let [hora, periodo] = (horaStr || '').split(' ');
+  let [h, min] = (hora || '0:00').split(':');
   h = parseInt(h);
   min = min || '00';
 
