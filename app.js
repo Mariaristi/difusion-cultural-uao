@@ -1,4 +1,6 @@
 import { createCard } from './utils.js';
+import { initCalendar } from './calendar.js';
+
 
 // Toggle del drawer
 const drawer = document.getElementById("drawer");
@@ -58,6 +60,7 @@ Promise.all([
   renderFiltroCards();
 
   // Renderizar todos los eventos al inicio
+   initCalendar(eventosDetalle);
   renderEventos(eventosMostrados);
 });
 

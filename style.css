@@ -15,17 +15,25 @@ body {
   left: 0;
   width: 240px;
   height: 100%;
-  background: #fff;
-  border-right: 1px solid #eee;
+  background:
+    radial-gradient(circle at top left, rgba(219, 15, 15, 0.044), transparent 60%),
+    radial-gradient(circle at 60% 30%, rgba(255, 72, 72, 0.136), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(193, 15, 12, 0.058), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(255, 251, 251, 0.095), transparent 60%),
+    radial-gradient(circle at 30% 80%, rgba(230, 69, 20, 0.219), transparent 30%);
+  background-color: rgb(255, 255, 255);
+  border-right: 1px solid #ffffff1e;
   padding: 16px;
   z-index: 1000;
   transform: translateX(0);
   transition: transform 0.3s ease;
+
+  border: 1px solid rgba(200, 200, 200, 0.297); 
 }
+
 .drawer.closed {
   transform: translateX(-100%);
 }
-
 /* Logo dentro del drawer */
 .drawer-logo {
   text-align: center;
@@ -35,7 +43,7 @@ body {
   display: inline-block;
   font-size: 25px;
   font-weight: 700;
-  color: #6a1b9a;
+  color: #BC0003;
 }
 .drawer-logo .cultural {
   display: inline-block;
@@ -48,7 +56,7 @@ body {
 /* Líneas divisorias */
 .drawer hr {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ddddddb4;
   margin: 18px 0;
 }
 
@@ -80,18 +88,68 @@ body {
   background: #fff;
   border-left: 1px solid #ddd;
   padding: 16px;
-  position: fixed;
+  position: fixed;     
   top: 0;
   right: 0;
-  height: 100vh;
-  overflow-y: auto;
+  height: 100vh;        
+  overflow-y: auto;    
+  overflow-x: hidden;   
   z-index: 900;
 }
+/* Contenedor de imágenes */
+.right-images {
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;              
+}
+
+/* Imágenes del panel derecho */
+.right-images img {
+  width: 100%;          
+  height: auto;         
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .right-panel {
+    width: 200px;       
+  }
+}
+
+@media (max-width: 768px) {
+  .right-panel {
+    position: relative; 
+    width: 100%;        
+    height: auto;       
+    border-left: none;  
+  }
+
+  .right-images img {
+    width: 48%;          
+    margin-bottom: 8px;
+  }
+
+  .right-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4%;
+  }
+}
+
 
 /* Header con búsqueda */
 header {
-  background: #fff;
-  padding: 8px 12px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.385), transparent 60%),
+    radial-gradient(circle at 60% 30%, rgba(250, 6, 6, 0.129), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(214, 183, 150, 0.058), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(186, 78, 78, 0.095), transparent 60%),
+    radial-gradient(circle at 30% 80%, rgba(232, 183, 168, 0.259), transparent 70%);
+  background-color: rgb(255, 255, 255); /* base blanca translúcida */
+  backdrop-filter: blur(10px);
+  padding: 10px 12px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -100,7 +158,12 @@ header {
   z-index: 900;
   transition: margin-left 0.3s ease;
   margin-left: 30px;
+
+  border: 1px solid rgba(200, 200, 200, 0.297); 
+  
 }
+
+
 header.shifted {
   margin-left: 0;
 }
@@ -114,10 +177,10 @@ header .search-container {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f2f2f2;
-  padding: 12px 14px;
-  border-radius: 22px;
-  width: 320px;
+  background: #ffffffb0;
+  padding: 8px 20px;
+  border-radius: 6px;
+  width: 700px;
   flex-grow: 0;
 }
 header .search-container input {
@@ -154,12 +217,13 @@ header .search-container .material-symbols-outlined {
   transition: background 0.2s ease;
 }
 .drawer-item:hover {
-  background: rgba(155, 39, 176, 0.1);
+  background: rgba(214, 214, 214, 0.2);
 }
 .drawer-item.active {
-  background: rgba(155, 39, 176, 0.2);
+  background: rgba(255, 255, 255, 0.499);
   font-weight: bold;
-  color: #6a1b9a;
+  color: #000000;
+  box-shadow: 4px 0 12px rgba(44, 0, 0, 0.036);
 }
 
 /* Escenas */
@@ -171,43 +235,83 @@ header .search-container .material-symbols-outlined {
   display: block;
 }
 
-/* Título de cada escena */
-.scene-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #7e7e7e8b;
-  margin-left: 30px;
-  margin-top: 10px;
-  margin-bottom: 18px;
-  text-align: left;
+/* Caja contenedora para el subtítulo intro*/
+.scene-subtitle-box {
+  background: rgba(255, 255, 255, 0.956); 
+  border: 1px solid rgba(200, 200, 200, 0.4); 
+  border-radius: 1px;
+  padding: 1px 252px;
+  width: 427px;
+  height: 190px;
+  margin-bottom: 49px;
+  transform: translate(20px, 25px); /* mueve en X y Y */
 }
 
-/* Primer párrafo con línea */
+
+
+/* --- Título principal del intro --- */
 .scene-subtitle.intro {
-  font-size: 18px;
+  font-size: 25px;
+  right: -290px;
   font-weight: bold;
   color: #333;
   margin: 20px 0 10px 30px;
-  padding-left: 12px;
-  border-left: 4px solid #6a1b9a;
+  padding-left: 2px;
+  text-align: left;
+  transform: translate(-240px, -270px); 
+  white-space: nowrap;
+}
+
+/* Imagen del intro */
+.intro-img {
+  width: 230px; /* ajusta el tamaño */
+  height: auto;
+  border-radius: 6px;
+  transform: translate(350px, -70px); /* (X, Y): derecha +X, izquierda -X, arriba -Y, abajo +Y */
+  transition: all 0.3s ease; /* animación suave */
+  flex-shrink: 0;
+}
+
+/* Contenedor de los textos */
+.intro-texts {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Segundo párrafo */
 .scene-subtitle.detalle {
   font-size: 14px;
-  font-weight: normal;
-  margin-left: 30px;
-  margin-top: 6px;
-  color: #555555ac;
-  line-height: 1.4;
-  max-width: 900px;
+  font-weight: bold;
+  margin: 0; 
+  text-align: left; 
+  color: #800101ac;
+  line-height: 1.5;
+  transform: translate(-210px, -270px); 
 }
+
+/* --- Adaptación responsiva --- */
+@media (max-width: 900px) {
+  .scene-subtitle-box {
+    width: 90%;
+    padding: 40px 30px;
+    margin: 20px auto;
+  }
+  .scene-subtitle.intro {
+    font-size: 18px;
+  }
+  .scene-subtitle.detalle {
+    font-size: 14px;
+  }
+}
+
+
+
 
 /* Contenedor de tarjetas en horizontal */
 .event-cards {
   display: flex;
   gap: 20px;
-  margin: 30px;
+  margin: -15px 30px 30px 30px;
   overflow-x: auto;
   padding-bottom: 10px;
   scroll-behavior: smooth;
@@ -229,8 +333,9 @@ header .search-container .material-symbols-outlined {
   color: #333;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: transform 0.3s ease, background 0.3s ease;
+  border: 2px solid rgba(200, 200, 200, 0.297); 
 }
 
 /* Zoom al pasar el mouse */
@@ -254,6 +359,7 @@ header .search-container .material-symbols-outlined {
   top: -40px;
   left: -40px;
   background: rgba(255, 255, 255, 0.852);
+  
 }
 .event-card::after {
   width: 80px;
@@ -270,14 +376,15 @@ header .search-container .material-symbols-outlined {
 
 /* Tarjeta seleccionada al hacer clic */
 .event-card.active {
-  background: #6a1b9a;
+  background: #BC0003;
+  border: 2px solid rgb(162, 0, 0); 
 }
 
 /*Personalización de cada tarjeta*/
 
 /* Música */
 .event-card.musica h2 {
-  color: #333333d8;
+  color: #000000d8;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -299,7 +406,7 @@ header .search-container .material-symbols-outlined {
 
 /* Arte */
 .event-card.arte h2 {
-  color: #333333d8;
+  color: #000000d8;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
@@ -321,7 +428,7 @@ header .search-container .material-symbols-outlined {
 
 /* Baile */
 .event-card.baile h2 {
-  color: #333333d8;
+  color: #000000d8;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -343,7 +450,7 @@ header .search-container .material-symbols-outlined {
 
 /* Teatro */
 .event-card.teatro h2 {
-  color: #333333d8;
+  color: #000000d8;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -365,7 +472,7 @@ header .search-container .material-symbols-outlined {
 
 /* Cultura */
 .event-card.cultura h2 {
-  color: #333333d8;
+  color: #000000d8;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -387,7 +494,7 @@ header .search-container .material-symbols-outlined {
 
 /* Literatura */
 .event-card.literatura h2 {
-  color:#333333d8;
+  color:#000000d8;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -411,13 +518,13 @@ header .search-container .material-symbols-outlined {
 .event-count {
   font-size: 12px;
   font-weight: 700;
-  color: #7c7b7b;
+  color: #940101c1;
   margin-top: 15px;
 }
 
 /* Cambiar el texto a blanco cuando la tarjeta está activa */
 .event-card.active .event-count {
-  color: #ffffffbb !important;
+  color: #ffffff !important;
 }
 .event-card.active h2,
 .event-card.active .event-desc {
@@ -537,7 +644,7 @@ header .search-container .material-symbols-outlined {
   font-size: 15px;
   font-weight: bold;
   color: #666666e3;
-  margin: 20px 0;
+  margin: 30px 30px;
 }
 
 .event-header {
@@ -559,53 +666,69 @@ header .search-container .material-symbols-outlined {
 }
 
 .favorite-icon.active {
-  color: red; /* rojo sólido cuando está seleccionado */
+  color: #A50000; /* rojo sólido cuando está seleccionado */
 }
 
-/* Mis preferencias */
-#scene-preferencias .scene-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #7e7e7e8b;
-  margin-left: 30px;
-  margin-top: 10px;
-  margin-bottom: 18px;
-  text-align: left;
+/* Caja contenedora para el subtítulo en mis preferencias (idéntica a eventos) */
+#scene-preferencias .scene-subtitlepre-box {
+  background: rgba(255, 255, 255, 0.956); 
+  border: 1px solid rgba(200, 200, 200, 0.4); 
+  border-radius: 1px;
+  padding: 75px 252px;       /* mismo padding que eventos */
+  width: 444px;
+  height: 20px;
+  margin-bottom: -20px;
+  transform: translate(20px, -15px); /* mismo desplazamiento */
 }
 
-/* Subtitulo*/
-#scene-preferencias .scene-subtitle {
-  font-size: 14px;
-  font-weight: normal;
-  margin-left: 30px;
-  margin-top: 6px;
-  color: #555555ac;
-  line-height: 1.4;
-  max-width: 900px;
-}
-
-/* Titulo con barrita morada */
-#scene-preferencias .scene-subtitle.detalle {
-  font-size: 18px;
+/* Título principal */
+#scene-preferencias .scene-subtitlepre-box .scene-title {
+  font-size: 25px;
+  right: -290px;
   font-weight: bold;
   color: #333;
   margin: 20px 0 10px 30px;
-  padding-left: 12px;
-  border-left: 4px solid #6a1b9a;
-}
-
-#scene-preferencias .no-results {
+  padding-left: 2px;
   text-align: left;
-  color: #777;
-  margin: 20px 0 10px 30px;
-  font-size: 16px;
+  transform: translate(-240px, -55px); 
+  white-space: nowrap;
 }
 
-
-/* Dashboard: mismo padding y disposición */
-#scene-preferencias .dashboard {
-  padding: 0 0 20px 0;
+/* Subtítulo normal */
+#scene-preferencias .scene-subtitlepre-box .scene-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0; 
+  text-align: left; 
+  color: #800101ac;
+  transform: translate(-210px, -55px); 
+  line-height: 1.5;
 }
+
+/* Contenedor de textos (si lo necesitas) */
+#scene-preferencias .scene-subtitlepre-box .intro-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Adaptación responsiva --- */
+@media (max-width: 900px) {
+  #scene-preferencias .scene-subtitlepre-box {
+    width: 90%;
+    padding: 40px 30px;
+    margin: 20px auto;
+  }
+  #scene-preferencias .scene-subtitlepre-box .scene-title {
+    font-size: 18px;
+  }
+  #scene-preferencias .scene-subtitlepre-box .scene-subtitle.detalle {
+    font-size: 14px;
+  }
+  #scene-preferencias .scene-subtitlepre-box .scene-subtitle {
+    font-size: 14px;
+  }
+}
+
 
 /* Tarjetas dentro de Mis preferencias */
 #scene-preferencias .filtered-event-card {
@@ -625,3 +748,176 @@ header .search-container .material-symbols-outlined {
   padding: 12px;
 }
 
+/*ESTILOS PARA EL CALENDARIO */
+
+/* Contenedor del calendario */
+#uao-calendar {
+  width: 95%;              /* Ajusta el ancho (ej. 90% del contenedor) */
+  min-height: 650px;       /* Alto mínimo */
+  margin-top: 40px;        /* Lo mueves en Y hacia abajo */
+  margin-left: 30px;       /* Lo mueves en X hacia la derecha */
+  padding: 15px;
+  border-radius: 1px;     /* Bordes más redondeados */
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+  transform: translate(-6px, -53px); 
+  border: 2px solid rgba(200, 200, 200, 0.297); 
+}
+
+
+/* Ajuste cuando el drawer está cerrado o abierto */
+#page-content.shifted #uao-calendar {
+  width: calc(100% - 260px);
+  transition: width 0.3s ease;
+}
+
+/* Encabezado del calendario (botones y título) */
+.fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.fc-toolbar-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize; /* Cambia a uppercase si prefieres mayúsculas */
+  color: #000000;
+}
+
+/*Botones de navegación y vista */
+.fc-button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #d0d0d0 !important;
+  border-radius: 12px !important;
+  padding: 6px 14px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.fc-button:hover {
+  background-color: #ff0000;       /* color más oscuro al pasar el mouse */
+  box-shadow: none !important; 
+}
+
+.fc-button-active {
+  background-color: #b30000 !important;
+  color: #fff !important;
+  border-color: #b30000 !important;
+}
+
+/*Celdas del calendario */
+.fc-daygrid-day {
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.fc-daygrid-day:hover {
+  background-color: #e91b1b18;
+}
+
+/* Cabecera de días (Lun, Mar, etc.)*/
+.fc-col-header-cell-cushion {
+  font-weight: 600;
+  color: #000000;
+  font-size: 0.8rem;
+}
+
+/* === Eventos === */
+.fc-event {
+  border-radius: 10px;
+  background-color: #ff730076 !important;
+  color: white !important;
+  border: none !important;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.fc-event:hover {
+  transform: scale(1.05);
+}
+
+
+/* Oculta los textos en inglés que vienen por defecto */
+.fc-dayGridMonth-button .fc-button-label,
+.fc-timeGridWeek-button .fc-button-label,
+.fc-timeGridDay-button .fc-button-label,
+.fc-today-button .fc-button-label {
+  display: none;
+}
+
+
+/* === Responsividad === */
+@media (max-width: 900px) {
+  #uao-calendar {
+    width: 100%;
+    min-height: 500px;
+    padding: 10px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.3rem;
+  }
+
+  .fc-button {
+    font-size: 0.8rem !important;
+    padding: 4px 10px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .fc-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* === Mejoras visuales para eventos === */
+.fc-daygrid-event, .fc-timegrid-event {
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #be0d0d66, #ff000091) !important;
+  color: #fff !important;
+  border: none !important;
+  font-size: 0.9rem !important;
+  padding: 6px 10px !important;
+  text-align: left;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  white-space: normal !important; /* ✅ permite saltos de línea */
+  word-break: break-word !important; /* ✅ divide palabras largas */
+  line-height: 1.3 !important;
+  overflow: visible !important; /* ✅ evita cortes */
+  min-height: 55px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.fc-event:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Ajusta cómo se muestran hora y título dentro del evento */
+.fc-event-time {
+  font-weight: 600;
+  font-size: 0.85rem !important;
+  margin-bottom: 2px;
+}
+
+.fc-event-title {
+  font-size: 0.85rem !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
+}

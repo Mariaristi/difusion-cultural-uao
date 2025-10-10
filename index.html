@@ -60,15 +60,17 @@
       <!-- Escenas -->
       <div class="scene active" id="scene-eventos">
         <div class="dashboard">
-          <h1 class="scene-title">Eventos</h1>
-          <p class="scene-subtitle intro">
-            Descubre la oferta cultural de la UAO.
-          </p>
-          <p class="scene-subtitle detalle">
-            Participa en conciertos, talleres, cine-foros y exposiciones pensadas para enriquecer tu experiencia universitaria.  
-            ¡Vive la cultura, conecta con tu comunidad y sé parte de cada evento!
-          </p>
-
+          <div class="scene-subtitle-box">
+            <img src="Imagenes/Descubre.png" alt="Descubre la UAO" class="intro-img">
+            <div class="intro-texts">
+              <p class="scene-subtitle intro">
+                Descubre la oferta cultural de la UAO.
+              </p>
+              <p class="scene-subtitle detalle">
+                ¡Vive la cultura, conecta con tu comunidad y sé parte de cada evento!
+              </p>
+            </div>
+          </div>
           <!-- Contenedor de tarjetas con botones de scroll -->
           <div class="event-cards" id="cards-container"></div>
           <!-- Tarjetas largas filtradas -->
@@ -76,23 +78,21 @@
         </div>
       </div>
 
-      <div class="scene" id="scene-preferencias">
-        <div class="dashboard">
+    <div class="scene" id="scene-preferencias">
+      <div class="dashboard">
+        <div class="scene-subtitlepre-box">
           <h1 class="scene-title">Mis preferencias</h1>
-          <p class="scene-subtitle detalle">
-            Marca tus favoritos
+          <p class="scene-subtitle">
+            Explora cada evento, descubre nuevas experiencias y no te pierdas nada de la UAO.
           </p>
-          <p class="scene-subtitle">Aquí están los eventos que más te interesan. Explora cada uno, descubre nuevas experiencias y no te pierdas nada de lo que la UAO tiene para ti.</p>
-          <div id="preferencias-container"></div> <!-- contenedor para tarjetas -->
         </div>
+        <div id="preferencias-container"></div> <!-- contenedor para tarjetas -->
       </div>
-
-
-
+    </div>
+          
       <div class="scene" id="scene-calendario">
         <div class="dashboard">
-          <h1 class="scene-title">Calendario</h1>
-          <p class="scene-subtitle">Visualiza los próximos eventos aquí.</p>
+    
         </div>
       </div>
 
@@ -103,15 +103,26 @@
         </div>
       </div>
 
-      <!-- Panel derecho fijo -->
-      <aside class="right-panel" id="right-panel">
-        <h3>Panel Derecho</h3>
-        <p>(Aquí irá contenido dinámico)</p>
-      </aside>
+<!-- Panel derecho fijo -->
+  <aside class="right-panel" id="right-panel">
+    <!-- Contenedor de imágenes -->
+    <div class="right-images">
+      <img src="Imagenes/Imagen1.jpg" alt="Imagen 1">
+      <img src="Imagenes/Imagen2.jpg" alt="Imagen 2">
+      <img src="Imagenes/Imagen3.jpg" alt="Imagen 3">
+      <img src="Imagenes/Imagen4.png" alt="Imagen 4">
+      <img src="Imagenes/Imagen5.png" alt="Imagen 5">
+      <!-- Agrega más imágenes según sea necesario -->
     </div>
-  </div>
+  </aside>
+
 
   <!-- Scripts -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/locales/es.global.min.js"></script>
+
+
   <script type="module" src="app.js"></script>
 
 </body>
