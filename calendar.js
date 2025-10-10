@@ -1,11 +1,9 @@
 // calendar.js
-import { abrirModalEvento } from './app.js'; // 👈 Importa la función que abrirá el modal en cualquier escena
-
 export function initCalendar(events = []) {
   const container = document.querySelector('#scene-calendario .dashboard');
   if (!container) return;
 
-  // Crear contenedor del calendario
+  // Crear contenedor
   const calDiv = document.createElement('div');
   calDiv.id = 'uao-calendar';
   container.appendChild(calDiv);
@@ -33,6 +31,7 @@ export function initCalendar(events = []) {
         'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
         'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
       ];
+      // date.date.marker es usado en tu versión; lo dejamos como estaba
       const mes = meses[date.date.marker.getMonth()];
       const año = date.date.marker.getFullYear();
       return `${mes.charAt(0).toUpperCase() + mes.slice(1)} ${año}`;
@@ -71,23 +70,23 @@ export function initCalendar(events = []) {
       }
     })),
 
-    // 👇 Aquí reemplazamos tu eventClick por el que llama a abrirModalEvento()
     eventClick: function(info) {
       const props = info.event.extendedProps;
 
-      abrirModalEvento({
-        titulo: info.event.title,
-        hora: props.hora,
-        fecha: info.event.start.toLocaleDateString(),
-        lugar: props.lugar,
-        descripcion: props.descripcion,
-        clase: props.clase
-      });
+      // Llenar el contenido del modal
+      const modalBody = document.getElementById('evento-modal-body');
+      if (modalBody) {
+        modalBody.innerHTML = ""
+      }
+
+      // Mostrar el modal (asegúrate de tener el HTML del modal en index.html)
+      const modal = document.getElementById('evento-modal');
+      if (modal) modal.style.display = 'flex';
     }
-  }); // ← Cierre de FullCalendar.Calendar
+  }); // <-- cierra new FullCalendar.Calendar(...)
 
   calendar.render();
-} // ← Cierre de initCalendar
+} // <-- cierra export function initCalendar(...)
 
 // Conversión dd/mm/yyyy → formato ISO
 function convertirFecha(fechaStr, horaStr = '00:00') {

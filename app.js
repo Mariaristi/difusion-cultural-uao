@@ -106,11 +106,66 @@ function renderEventos(lista, container = filteredContainer) {
     return;
   }
 
+  // Contenido manual para cada evento
+  const contenidoModal = {
+    "La UAO se mueve con la Carrera Atlética 2025": `
+      <h2 style="color: red;">Carrera Atlética 2025</h2>
+      <p>Únete a esta carrera atlética para fomentar la integración y el bienestar físico.</p>
+      <p>Lugar: Arco Central</p>
+    `,
+    "10º Encuentro de Clubes de Lectura": `
+      <h2 style="color: blue;">Clubes de Lectura</h2>
+      <p>Intercambio de experiencias sobre fomento a la lectura.</p>
+      <p>Lugar: Auditorio Xepia</p>
+    `,
+    "Zentangles: arte que relaja e inspira": `
+      <h2 style="color: purple;">Zentangles</h2>
+      <p>Exposición de obras con la técnica Zentangle, que promueve la relajación y creatividad.</p>
+      <p>Lugar: CRAI</p>
+    `,
+    "¡La salsa vibra en la UAO!": `
+      <h2 style="color: orange;">Concierto de Salsa</h2>
+      <p>Homenaje a Cheo Feliciano y Rubén Blades con música en vivo.</p>
+      <p>Lugar: Auditorio Quincha</p>
+    `,
+    "Taller de lectura virtual: El buen mal": `
+      <h2 style="color: teal;">Taller Virtual</h2>
+      <p>Taller en línea para compartir y disfrutar la lectura.</p>
+      <p>Lugar: Modalidad virtual</p>
+    `,
+    "Café UAO: Día de Amor y Amistad": `
+      <h2 style="color: pink;">Café UAO</h2>
+      <p>Evento cultural con música, arte y convivencia.</p>
+      <p>Lugar: Centro Cultural y Deportivo UAO</p>
+    `,
+    "Día Internacional de los Museos": `
+      <h2 style="color: green;">Museos</h2>
+      <p>Jornada con arte, mapping y museo virtual.</p>
+      <p>Lugar: Museo Lili</p>
+    `,
+    "Festival de Colores y Sonidos": `
+      <h2 style="color: fuchsia;">Festival de Colores</h2>
+      <p>Fusión de arte y música en vivo.</p>
+      <p>Lugar: Auditorio Xepia</p>
+    `,
+    "El Escritor al Aula": `
+      <h2 style="color: brown;">Conversatorio Literario</h2>
+      <p>Encuentro con el autor Humberto Jarrín.</p>
+      <p>Lugar: Salón 3406</p>
+    `,
+    "Exposición fotográfica AVE": `
+      <h2 style="color: navy;">Exposición AVE</h2>
+      <p>Fotografías sobre sostenibilidad y ecología.</p>
+      <p>Lugar: Sala de exposiciones CRAI</p>
+    `
+    // Puedes seguir agregando los demás eventos de la misma forma
+  };
+
   lista.forEach(ev => {
     const div = document.createElement('div');
     div.classList.add('filtered-event-card');
     div.innerHTML = `
-      <img src="${ev.imagen}" alt="${ev.titulo}">
+      <img src="${ev.imagen1}" alt="${ev.titulo}">
       <div class="event-info">
         <div class="event-header">
           <h3 class="event-title">${ev.titulo}</h3>
@@ -123,16 +178,20 @@ function renderEventos(lista, container = filteredContainer) {
       </div>
     `;
 
-    // 👇 Agregamos el listener para abrir el modal
-div.addEventListener('click', (e) => {
-  // Evitar que el click en el corazón active el modal
-  if(e.target.classList.contains('favorite-icon')) return;
+    // 👇 Listener para abrir modal con contenido manual
+    div.addEventListener('click', (e) => {
+      if(e.target.classList.contains('favorite-icon')) return;
 
-  abrirModalEvento(ev);
-});
+      const modalBody = document.getElementById("evento-modal-body");
+      modalBody.innerHTML = contenidoModal[ev.titulo] || "<p>Información no disponible</p>";
+
+      abrirModalEvento();
+    });
+
     container.appendChild(div);
   });
 }
+
 
 // Búsqueda en vivo sobre TODOS los eventos
 const searchInput = document.querySelector(".search-container input");
@@ -200,22 +259,26 @@ function showMisPreferencias() {
 
 // === FUNCIONALIDAD DEL MODAL DE EVENTO ===
 
-// Función que abre el modal con la información del evento
-export function abrirModalEvento(evento) {
-  const modal = document.getElementById("evento-modal");
+// Función que solo cambia el contenido del modal
+export function renderEventoModal(evento) {
   const modalBody = document.getElementById("evento-modal-body");
-
-  if (!modal || !modalBody) return;
+  if (!modalBody) return;
 
   modalBody.innerHTML = `
     <h2>${evento.titulo}</h2>
     <p><strong>Hora:</strong> ${evento.hora}</p>
     <p><strong>Fecha:</strong> ${evento.fecha}</p>
     <p><strong>Lugar:</strong> ${evento.lugar}</p>
-    <p><strong>Descripción:</strong> ${evento.descripcion}</p>
-    <p><strong>Categoría:</strong> ${evento.clase}</p>
+    <p>${evento.descripcion}</p>
+    <div class="imagenes-extra">
+      ${evento.imagenesAdicionales.map(img => `<img src="${img}" alt="${evento.titulo}">`).join('')}
+    </div>
   `;
+}
 
+// Función que solo muestra el modal
+export function abrirModalEvento() {
+  const modal = document.getElementById("evento-modal");
   modal.style.display = "flex";
 }
 

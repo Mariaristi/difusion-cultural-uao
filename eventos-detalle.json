@@ -1,101 +1,164 @@
 [
-  {
-    "clase": "musica",
-    "titulo": "Concierto UAO Jazz",
-    "descripcion": "Disfruta de la mejor música jazz en vivo",
-    "fecha": "05/10/2025",
-    "hora": "1:00 PM",
-    "lugar": "Auditorio Principal",
-    "imagen": "https://source.unsplash.com/120x120/?jazz,music"
-  },
-  {
-    "clase": "musica",
-    "titulo": "Recital de piano",
-    "descripcion": "Piezas clásicas interpretadas por alumnos",
-    "fecha": "6/10/2025",
-    "hora": "6:30 PM",
-    "lugar": "Sala de Conciertos",
-    "imagen": "https://source.unsplash.com/120x120/?piano,music"
-  },
-  {
-    "clase": "musica",
-    "titulo": "Batalla de Rap",
-    "descripcion": "Competencia de rap entre alumnos",
-    "fecha": "12/10/2025",
-    "hora": "2:00 PM",
-    "lugar": "Bienestar UAO",
-    "imagen": "https://source.unsplash.com/120x120/?rap,music"
-  },
-  {
-    "clase": "arte",
-    "titulo": "Exposición de pintura moderna",
-    "descripcion": "Obras de artistas locales contemporáneos",
-    "fecha": "26/9/2025",
-    "hora": "10:00 AM",
-    "lugar": "Galería Central",
-    "imagen": "https://source.unsplash.com/120x120/?painting,art"
-  },
-  {
-    "clase": "arte",
-    "titulo": "Taller de escultura",
-    "descripcion": "Aprende técnicas básicas de escultura",
-    "fecha": "28/9/2025",
-    "hora": "3:00 PM",
-    "lugar": "Taller de Arte",
-    "imagen": "https://source.unsplash.com/120x120/?sculpture,art"
-  },
-  {
-    "clase": "teatro",
-    "titulo": "Obra de teatro",
-    "descripcion": "Presentación de obra local",
-    "fecha": "18/10/2025",
-    "hora": "5:00 PM",
-    "lugar": "Galería Central",
-    "imagen": "https://source.unsplash.com/120x120/?theater,stage"
-  },
-  {
-    "clase": "baile",
-    "titulo": "Concierto de Salsa",
-    "descripcion": "Disfruta del ritmo de la salsa",
-    "fecha": "08/11/2025",
-    "hora": "7:30 AM",
-    "lugar": "Gimnasio",
-    "imagen": "https://source.unsplash.com/120x120/?salsa,dance"
-  },
-  {
-    "clase": "cultura",
-    "titulo": "Exposición de ciencia moderna",
-    "descripcion": "Descubre los avances científicos actuales",
-    "fecha": "28/10/2025",
-    "hora": "11:00 AM",
-    "lugar": "Galería Central",
-    "imagen": "https://source.unsplash.com/120x120/?science,culture"
-  },
-  {
-    "clase": "literatura",
-    "titulo": "Huso de la palabra",
-    "descripcion": "Evento literario y lectura de poemas",
-    "fecha": "08/11/2025",
-    "hora": "4:00 PM",
-    "lugar": "Auditorio...",
-    "imagen": "https://source.unsplash.com/120x120/?books,literature"
-  },
-   {
-    "clase": "literatura",
-    "titulo": "Huso de la palabra",
-    "descripcion": "Evento literario y lectura de poemas",
-    "fecha": "08/11/2025",
-    "hora": "4:00 PM",
-    "lugar": "Auditorio...",
-    "imagen": "https://source.unsplash.com/120x120/?books,literature"
-  },
-   {
-    "clase": "literatura",
-    "titulo": "Huso de la palabra",
-    "descripcion": "Evento literario y lectura de poemas",
-    "fecha": "08/11/2025",
-    "hora": "4:00 PM",
-    "lugar": "Auditorio...",
-    "imagen": "https://source.unsplash.com/120x120/?books,literature"
-  }
+ {
+  "clase": "cultura",
+  "titulo": "La UAO se mueve con la Carrera Atlética 2025",
+  "descripcion": "Carrera de integración y bienestar en el campus UAO.",
+  "fecha": "16/10/2025",
+  "hora": "8:00 AM a 12:00 PM",
+  "lugar": "Arco Central"
+ },
+ {
+  "clase": "literatura",
+  "titulo": "10º Encuentro de Clubes de Lectura",
+  "descripcion": "Intercambio de experiencias sobre fomento a la lectura.",
+  "fecha": "16/10/2025",
+  "hora": "8:30 AM a 4:00 PM",
+  "lugar": "Auditorio Xepia"
+ },
+ {
+  "clase": "arte",
+  "titulo": "Zentangles: arte que relaja e inspira",
+  "descripcion": "Exposición de obras con la técnica Zentangle.",
+  "fecha": "09/09/2025 al 19/09/2025",
+  "hora": "8:00 AM a 5:30 PM",
+  "lugar": "CRAI"
+ },
+ {
+  "clase": "musica",
+  "titulo": "¡La salsa vibra en la UAO!",
+  "descripcion": "Concierto homenaje a Cheo Feliciano y Rubén Blades.",
+  "fecha": "24/09/2025",
+  "hora": "6:00 PM a 7:00 PM",
+  "lugar": "Auditorio Quincha"
+ },
+ {
+  "clase": "literatura",
+  "titulo": "Taller de lectura virtual: El buen mal",
+  "descripcion": "Taller en línea para compartir y disfrutar la lectura.",
+  "fecha": "18/09/2025",
+  "hora": "2:30 PM",
+  "lugar": "Modalidad virtual"
+ },
+ {
+  "clase": "cultura",
+  "titulo": "Café UAO: Día de Amor y Amistad",
+  "descripcion": "Evento cultural con música, arte y convivencia.",
+  "fecha": "17/09/2025",
+  "hora": "5:00 PM a 8:00 PM",
+  "lugar": "Centro Cultural y Deportivo UAO"
+ },
+ {
+  "clase": "cultura",
+  "titulo": "Día Internacional de los Museos",
+  "descripcion": "Jornada con arte, mapping y museo virtual.",
+  "fecha": "20/05/2025 al 23/05/2025",
+  "hora": "9:00 AM a 5:00 PM",
+  "lugar": "Museo Lili"
+ },
+ {
+  "clase": "baile",
+  "titulo": "Festival de Colores y Sonidos",
+  "descripcion": "Fusión de arte y música en vivo.",
+  "fecha": "31/05/2025",
+  "hora": "10:00 AM a 12:00 PM",
+  "lugar": "Auditorio Xepia"
+ },
+ {
+  "clase": "literatura",
+  "titulo": "El Escritor al Aula",
+  "descripcion": "Conversatorio con el autor Humberto Jarrín.",
+  "fecha": "10/09/2025",
+  "hora": "3:30 PM a 5:30 PM",
+  "lugar": "Salón 3406"
+ },
+ {
+  "clase": "arte",
+  "titulo": "Exposición fotográfica AVE",
+  "descripcion": "Fotografías sobre sostenibilidad y ecología.",
+  "fecha": "18/03/2025 al 07/04/2025",
+  "hora": "5:00 PM a 7:00 PM",
+  "lugar": "Sala de exposiciones CRAI"
+ },
+ {
+  "clase": "cultura",
+  "titulo": "Camina nuestra ciudad",
+  "descripcion": "Recorrido urbano por monumentos de Cali.",
+  "fecha": "23/03/2025",
+  "hora": "7:30 AM a 12:00 PM",
+  "lugar": "Parque de las Banderas"
+ },
+ {
+  "clase": "musica",
+  "titulo": "Flow y versos: taller de freestyle",
+  "descripcion": "Espacio para improvisar y crear rimas.",
+  "fecha": "18/03/2025",
+  "hora": "12:00 PM a 1:30 PM",
+  "lugar": "Zona verde frente a la tienda UAO"
+ },
+ {
+  "clase": "musica",
+  "titulo": "Velada de música y café",
+  "descripcion": "Café UAO con freestyle y música en vivo.",
+  "fecha": "06/03/2025",
+  "hora": "4:00 PM a 8:30 PM",
+  "lugar": "Zona verde del Centro Cultural y Deportivo"
+ },
+ {
+  "clase": "cultura",
+  "titulo": "Miércoles de ceniza",
+  "descripcion": "Espacio de reflexión y eucaristía.",
+  "fecha": "05/03/2025",
+  "hora": "10:00 AM a 1:30 PM",
+  "lugar": "Capilla UAO"
+ },
+ {
+  "clase": "cultura",
+  "titulo": "Prográmate con Sexonomía",
+  "descripcion": "Charlas y talleres sobre salud sexual.",
+  "fecha": "17/02/2025 al 21/02/2025",
+  "hora": "12:00 PM a 2:00 PM",
+  "lugar": "Aulas 4 Torreón 1"
+ },
+ {
+  "clase": "literatura",
+  "titulo": "Antorcha Literaria",
+  "descripcion": "Lectura de historias de terror y escritura colectiva.",
+  "fecha": "31/10/2023",
+  "hora": "6:30 PM a 8:30 PM",
+  "lugar": "Zona verde del CAFS"
+ },
+ {
+  "clase": "cultura",
+  "titulo": "Gamer’s Day",
+  "descripcion": "Charlas y torneos sobre cultura gamer.",
+  "fecha": "29/08/2022",
+  "hora": "10:00 AM a 5:00 PM",
+  "lugar": "Auditorio Yquinde"
+ },
+ {
+  "clase": "literatura",
+  "titulo": "Taller práctico de Mendeley",
+  "descripcion": "Aprende a usar Mendeley para citar y referenciar.",
+  "fecha": "19/08/2025",
+  "hora": "10:00 AM a 12:00 PM",
+  "lugar": "Salón Digicampus 1"
+ },
+ {
+  "clase": "teatro",
+  "titulo": "Raíces doradas",
+  "descripcion": "Desfile de arte textil inspirado en la cultura Calima.",
+  "fecha": "19/09/2025",
+  "hora": "6:00 PM a 7:00 PM",
+  "lugar": "Centro Cultural y Deportivo"
+ },
+ {
+  "clase": "musica",
+  "titulo": "Suspiros del viento",
+  "descripcion": "Presentación de la Orquesta de Cámara UAO.",
+  "fecha": "09/05/2025",
+  "hora": "6:00 PM a 8:00 PM",
+  "lugar": "Auditorio Yquinde"
+ }
 ]
+
+
