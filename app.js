@@ -124,9 +124,12 @@ function renderEventos(lista, container = filteredContainer) {
       <p>Lugar: CRAI</p>
     `,
     "¡La salsa vibra en la UAO!": `
-      <h2 style="color: orange;">Concierto de Salsa</h2>
+      <h2 ">Concierto de Salsa</h2>
       <p>Homenaje a Cheo Feliciano y Rubén Blades con música en vivo.</p>
       <p>Lugar: Auditorio Quincha</p>
+      <p>Disfruta de un concierto en homenaje a grandes exponentes de la salsa.,
+      La orquesta y los bailarines invitados harán que el público viva la experiencia con energía y ritmo.,
+      Habrá también una sección educativa sobre la historia y evolución de la salsa en Latinoamérica."</p>
     `,
     "Taller de lectura virtual: El buen mal": `
       <h2 style="color: teal;">Taller Virtual</h2>
@@ -194,27 +197,44 @@ function renderEventos(lista, container = filteredContainer) {
 
 
 // Búsqueda en vivo sobre TODOS los eventos
+// Búsqueda en vivo sobre TODOS los eventos o favoritos según la escena activa
 const searchInput = document.querySelector(".search-container input");
 searchInput.addEventListener("input", e => {
   const query = e.target.value.toLowerCase();
+  const activeScene = document.querySelector(".scene.active"); // 🧠 detectar escena activa
 
-  let listaAFiltrar = eventosDetalle; // TODOS los eventos
+  // Definir lista base y contenedor dependiendo de la escena activa
+  let listaAFiltrar;
+  let container;
 
+  if (activeScene && activeScene.id === "scene-preferencias") {
+    // Escena de Mis preferencias
+    listaAFiltrar = favoritos;
+    container = preferenciasContainer;
+  } else {
+    // Escena de Eventos (por defecto)
+    listaAFiltrar = eventosDetalle;
+    container = filteredContainer;
+  }
+
+  // Si no hay texto, mostrar todos los eventos o favoritos
   if (!query) {
-    renderEventos(listaAFiltrar);
+    renderEventos(listaAFiltrar, container);
     return;
   }
 
+  // Filtrado general
   const filtrados = listaAFiltrar.filter(ev =>
-    ev.titulo.toLowerCase().includes(query) ||
+    ev.titulo.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(query) ||
     ev.descripcion.toLowerCase().includes(query) ||
     ev.fecha.toLowerCase().includes(query) ||
     ev.hora.toLowerCase().includes(query) ||
     ev.lugar.toLowerCase().includes(query)
   );
 
-  renderEventos(filtrados);
+  renderEventos(filtrados, container);
 });
+
 
 // Marcar favoritos al hacer click en el corazón
 filteredContainer.addEventListener("click", e => {
