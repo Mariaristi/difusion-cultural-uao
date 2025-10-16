@@ -6,13 +6,10 @@
   "fecha": "16/10/2025",
   "hora": "8:00 AM",
   "lugar": "Arco Central",
-  "imagen3": "Imagenes/Slide-evento-carrera-atletica.png",
+  "imagen3": "Imagenes/Carrera-A.png",
   "imagen1": "Imagenes/Slide-evento-carrera-atletica.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "La UAO invita a su Comunidad a ser parte de la Carrera Atlética UAO 2025, un espacio de encuentro, deporte y bienestar que recorrerá cada rincón del Campus.",
-  "descripcionExtendida2": "Para los participantes, la cita es el 16 de octubre, a las 8:00 a. m., con punto de encuentro en el Arco Central, donde iniciarán un calentamiento previo a la carrera.",
-  "descripcionExtendida3": "Por otro lado, al ser una actividad pensada para disfrutar en comunidad y vivir el espíritu UAO, quienes deseen alentar a los corredores, pueden ubicarse a lo largo de la Universidad a las 10:00 a. m. y participar por diversos premios.",
-  "descripcionExtendida4":"La actividad está abierta para estudiantes, profesores, colaboradores y egresados que quieran sumarse a esta jornada de integración y movimiento."
+  "imagen4": "Imagenes/General.png",
+  "imagen5": "Imagenes/Carrera--M.png"
  },
  {
   "clase": "literatura",
@@ -21,12 +18,10 @@
   "fecha": "16/10/2025",
   "hora": "8:30 AM",
   "lugar": "Auditorio Xepia",
-  "imagen3": "Imagenes/Slide-evento-carrera-atletica.png",
+  "imagen3": "Imagenes/Escritura.png",
   "imagen1": " Imagenes/Diseno-sin-titulo.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Comunidad UAO, el CRAI los invita a participar de este décimo Encuentro de Clubes de Lectura, un espacio para conmemorar las diez ediciones de este evento, que promueve el intercambio de experiencias positivas y efectivas de promoción de lectura a nivel universitario.  ",
-  "descripcionExtendida2": "Este espacio contará con conferencias y talleres, de la mano de invitados especiales como:  ",
-  "descripcionExtendida3": " Santiago Villegas, bibliotecólogo; Pedro García Obando, director de la Biblioteca de la Universidad Industrial de Santander y Luis Bernardo Yepes, escritor y bibliotecólogo.   "
+  "imagen4": "Imagenes/General.png",
+  "imagen5": "Imagenes/Lectura.png"
  },
  {
   "clase": "arte",
@@ -35,13 +30,11 @@
   "fecha": "09/09/2025",
   "hora": "8:00 AM",
   "lugar": "CRAI",
-  "imagen3": "ES DE LA FECHA.png",
-  "imagen2": "1.png",
-  "imagen1": " Imagenes/Diseno-sin-titulo-1.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Comunidad UAO, te invitamos a explorar una experiencia artística donde la concentración y la creatividad se entrelazan en cada trazo. ",
-  "descripcionExtendida2": "Desde el 9 hasta el 19 de septiembre, la sala de exposiciones del CRAI, se transforma con Zentangles, la exposición artística de Ambra Finotto Paz, estudiante de Narrativas y Entretenimiento Digital, NED, e integrante del Semillero de Investigación Imalab. ",
-  "descripcionExtendida3": " ¡No te lo pierdas! Descubre el poder del arte como herramienta de conexión interior. "
+  "imagen3": "Imagenes/Zengal.png",
+  "imagen2": "Imagenes/Zengal-Text1.png",
+  "imagen1": "Imagenes/Diseno-sin-titulo-1.png",
+  "imagen4": "Imagenes/General.png",
+  "imagen5": "Imagenes/Zengal-Text.png"
  },
  {
  
@@ -54,12 +47,12 @@
   "fecha": "24/09/2025",
   "hora": "6:00 PM",
   "lugar": "Auditorio Quincha",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Salsa.png",
   "imagen1": " Imagenes/Concierto-salsa.jpg",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Este 24 de septiembre, a las 6:00 p.m., en el auditorio Quincha, la Orquesta Son de la UAO rinde homenaje a dos gigantes de la salsa: Cheo Feliciano y Rubén Blades. ",
-  "descripcionExtendida2": "Un concierto didáctico para cantar, aprender y disfrutar, con la participación especial de Pacífico Kids, desde Veredas Unidas, Guachené. "
-},
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Salsa-1.png"
+ },
+
  {
   "clase": "literatura",
   "titulo": "Taller de lectura virtual: El buen mal",
@@ -67,12 +60,12 @@
   "fecha": "18/09/2025",
   "hora": "2:30 PM",
   "lugar": "Modalidad virtual",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Online-1.png",
   "imagen1": " Imagenes/LECTURA-ONLINE.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Si eres estudiante de modalidad híbrida, virtual o haces parte del programa DigiCampus, te invitamos a participar el próximo taller de lectura virtual: El buen mal, un espacio desarrollado por el CRAI UAO.",
-  "descripcionExtendida2": "Esta iniciativa está diseñada para compartir, reflexionar y, sobre todo, disfrutar del poder de los libros. Será una experiencia interactiva y dinámica, donde podrán compartir inquietudes, aprender nuevas formas de mediación y descubrir cómo los cuentos y las historias pueden transformar la manera en que entendemos el mundo."    
-},
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Online.png"
+ },
+  
  {
   "clase": "cultura",
   "titulo": "Café UAO: Día de Amor y Amistad",
@@ -80,10 +73,10 @@
   "fecha": "17/09/2025",
   "hora": "5:00 PM",
   "lugar": "Centro Cultural y Deportivo UAO",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/UAO-Cafe.png",
   "imagen1": " Imagenes/AMOR-Y-AMISTAD-CAFE-UAO.jpg",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "¡Este es un evento que no te querrás perder! Artistas, rifas y mucho café, son algunas de las actividades que podrás disfrutar este jueves 14 de septiembre, de 5:30 p.m. a 8:30 p.m., en el Centro Cultural y Deportivo, anímate y celebra con tus amigos. Informes: Bienestar Universitario, ext. 13021."
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Cafe-UAO.png"
  },
  {
   "clase": "cultura",
@@ -92,10 +85,10 @@
   "fecha": "20/05/2025",
   "hora": "9:00 AM",
   "lugar": "Museo Lili",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Museo-1.png",
   "imagen1": " Imagenes/dia-internacional-de-los-museos.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "a UAO se une a la conmemoración del Día Internacional de los Museos, con una agenda que incluye la inauguración de la exposición Tras las Huellas de las Memorias del Territorio; la presencia del Museo en realidad virtual, en diferentes espacios del Campus y de Fundautónoma; muestras de video mapping sobre la región Pacífico y la Universidad y una jornada especial de Cocina + Arte que vincula expresiones del territorio y el Museo Lili de la UAO.  "
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Museo-2.png"
  },
  {
   "clase": "baile",
@@ -104,10 +97,11 @@
   "fecha": "31/05/2025",
   "hora": "10:00 AM",
   "lugar": "Auditorio Xepia",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Festival.png",
   "imagen1": " Imagenes/3-1.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Asiste este sábado 31 de mayo al Festival de Colores y Sonidos, un evento para dejarte llevar por la magia del arte, la música y la creatividad. Disfruta también del parche artístico, con música en vivo de guitarra y mucha vibra positiva. ¡Una experiencia para conectar que no te puedes perder! "
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Colores.png"
+  
  },
  {
   "clase": "literatura",
@@ -116,10 +110,10 @@
   "fecha": "10/09/2025",
   "hora": "3:30 PM",
   "lugar": "Salón 3406",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Aula.png",
   "imagen1": " Imagenes/UAO-3.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Asiste este sábado 31 de mayo al Festival de Colores y Sonidos, un evento para dejarte llevar por la magia del arte, la música y la creatividad. Disfruta también del parche artístico, con música en vivo de guitarra y mucha vibra positiva. ¡Una experiencia para conectar que no te puedes perder! "
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Escritor.png"
  },
  {
   "clase": "arte",
@@ -128,10 +122,10 @@
   "fecha": "18/03/2025 al 07/04/2025",
   "hora": "5:00 PM",
   "lugar": "Sala de exposiciones CRAI",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Años.png",
   "imagen1": " Imagenes/Proyecto-AVE.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Visita hasta el 7 de abril la exposición del proyecto Arte + Visión+ Ecología, AVE, sobre los Ecobarrios, donde podrás conocer el arte de una comunidad sostenible, quien por medio de fotografías, nos contará sus logros y avances en la estrategia que durante siete años ha desarrollado, en pro del compromiso con la sostenibilidad ambiental de sus territorios. "
+    "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Visita.png"
  },
  {
   "clase": "cultura",
@@ -140,11 +134,10 @@
   "fecha": "23/03/2025",
   "hora": "7:30 AM",
   "lugar": "Parque de las Banderas",
-  "imagen3": "ES DE LA FECHA.png", 
+  "imagen3": "Imagenes/Domingo.png", 
   "imagen1": " Imagenes/CIUDAD.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Si te gustan las actividades al aire libre, disfrutar de la naturaleza y compartir con nuevas personas, ¡este es tu lugar! ",
-  "descripcionExtendida2": "En el Club de Caminantes nos reunimos para recorrer diferentes rutas, mejorar nuestra salud y despejar la mente. Por eso te invitamos a participar en nuestro próximo recorrido, inscríbete en el siguiente enlace desde lunes 17 de marzo hasta el jueves 20 de marzo de 2025."
+    "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Recorrido.png"
  },
  {
   "clase": "musica",
@@ -153,11 +146,10 @@
   "fecha": "18/03/2025",
   "hora": "12:00 PM",
   "lugar": "Zona verde frente a la tienda UAO",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Flow.png",
   "imagen1": " Imagenes/Rap.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "i te gusta improvisar, rimar y soltar barras con estilo, este espacio es para ti. ¡No necesitas experiencia, solo ganas de expresarte! ",
-  "descripcionExtendida2": "Participa en taller de freestyle, te esperamos."
+    "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Gusto.png"
 },
  {
   "clase": "musica",
@@ -166,12 +158,12 @@
   "fecha": "06/03/2025",
   "hora": "4:00 PM",
   "lugar": "Zona verde del Centro Cultural y Deportivo",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Velada-musical.png",
   "imagen1": " Imagenes/VELADA.png",
   "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Te invitamos este 6 de marzo al Café UAO, que se realizará en el marco de la Conmemoración de día Internacional de la Mujer. Asiste y disfruta de un espacio lleno de artistas en vivo, DJ con la mejor música y batallas de freestyle, con la participación especial de Pandora, participante del Freestyle Master Series.  ",
-  "descripcionExtendida2": "Además, podrás conocer más acerca de nuestros grupos estudiantiles y disfrutar de todas las sorpresas que este Café UAO tiene para ti. "
-},
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Musica.png"
+ },
  {
   "clase": "cultura",
   "titulo": "Miércoles de ceniza",
@@ -179,12 +171,10 @@
   "fecha": "05/03/2025",
   "hora": "10:00 AM",
   "lugar": "Capilla UAO",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Ceniza-1.png",
   "imagen1": " Imagenes/ceniza.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "l miércoles 5 de marzo, te prepararás para iniciar el tiempo de cuaresma, un periodo de autoevaluación y transformación.  ",
-  "descripcionExtendida2": "En la UAO encontrarás un espacio especial para vivir este momento, asiste a la Capilla, de: 10:00 a.m. a 12:00 m. y de 12:40 p.m. a 1:30 p.m., donde podrás acercarte a reflexionar.  ",
-  "descripcionExtendida3": "Además, a las 12:00 m. se celebrará la eucaristía. "
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Eucaristia.png"
  },
  {
   "clase": "cultura",
@@ -193,10 +183,12 @@
   "fecha": "17/02/2025",
   "hora": "12:00 PM",
   "lugar": "Aulas 4 Torreón 1",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Sexonomia.png",
   "imagen1": " Imagenes/Y.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Te invitamos a participar de todas las actividades que tendremos esta semana para ti. Participa de manera presencial en Aulas 4 torreón 1."
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Sex-Text2.png",
+  "imagen5": "Imagenes/Sex-Text1.png"
+ 
  },
  {
   "clase": "literatura",
@@ -205,24 +197,23 @@
   "fecha": "31/10/2023",
   "hora": "6:30 PM",
   "lugar": "Zona verde del CAFS",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Terror.png",
   "imagen1": " Imagenes/Antorcha.JPg",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "i te gustan las historias de miedo y quieres participar por premios institucionales, no te puedes perder la Antorcha Literaria, un espacio que el Centro de Recursos para el Aprendizaje y la Investigación, CRAI, ha diseñado como parte del club de lectura Catarsis, donde se leerán relatos de terror, experiencias paranormales y se realizará la actividad de escritura Cadáver exquisito."
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Antorcha-terror.png"
  },
  {
   "clase": "cultura",
   "titulo": "Gamer’s Day",
   "descripcion": "Charlas y torneos sobre cultura gamer.",
-  "fecha": "29/08/2022",
-  "hora": "10:00 AM",
+  "fecha": "01/09/2023",
+  "hora": "8:00 AM",
   "lugar": "Auditorio Yquinde",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Gamer-1.png",
   "imagen1": " Imagenes/Gamers.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "El Gamer’s Day UAO es un evento organizado por las especializaciones en Periodismo Deportivo y Estrategias de Comunicación Transmedia, junto al programa de Narrativas y Entretenimiento Digital, el CRAI y la Liga Vallecaucana de Deportes Electrónicos (LVDE). El espacio busca combinar aprendizaje y entretenimiento en torno a los deportes electrónicos, con la participación de los grupos estudiantiles Media Collab y Otama, ofreciendo una experiencia única para estudiantes y aficionados del sector.",
-  "descripcionExtendida2": "El evento se llevará a cabo el viernes 1 de septiembre de 2023, desde las 10:00 a. m., en el auditorio Yquinde de la Universidad Autónoma de Occidente. Durante la jornada se podrán disfrutar de diversas actividades como muestras de emprendedores, charlas académicas con expertos, participación de cosplayers y torneos demostrativos de Fifa 23, Freefire y E-Ajedrez.",
-  "descripcionExtendida3": "Entre los invitados destacan Alberto Bolaños, presidente de la LVDE; Alexander Ospina, presidente de Fedecolde; y Lizandro Penagos, coordinador académico de la especialización en Periodismo Deportivo. La programación incluye instalación de emprendedores desde las 8:00 a. m., apertura con conversatorio sobre la carrera latinoamericana de los deportes electrónicos a las 10:00 a. m., torneos de videojuegos desde las 2:20 p. m., y un conversatorio sobre videojuegos, transmedia e interactividad a las 3:00 p. m., abordando experiencias, desarrollos y oportunidades en este campo."
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Gamer-3.png",
+  "imagen5": "Imagenes/Gamer-2.png"
 },
  {
   "clase": "literatura",
@@ -231,11 +222,10 @@
   "fecha": "19/08/2025",
   "hora": "10:00 AM",
   "lugar": "Salón Digicampus 1",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Taller-mende.png",
   "imagen1": " Imagenes/Medeley.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "i tienes problemas para citar y elaborar las referencias bibliográficas en tus trabajos, el CRAI te invita a participar en el taller sobre el gestor bibliográfico Mendeley, una herramienta que facilita la elaboración de citas y referencias de forma automática en cualquier tipo de trabajo. ",
-  "descripcionExtendida2": "La modalidad del taller será híbrida, por lo que puedes participar de manera virtual o presencial, en el salón Digicampus 1, ubicado en el edificio del CRAI. "
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Mende.png"
 },
  {
   "clase": "teatro",
@@ -244,12 +234,11 @@
   "fecha": "19/09/2025",
   "hora": "6:00 PM",
   "lugar": "Centro Cultural y Deportivo",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Dorado.png",
   "imagen1": " Imagenes/Raices.jpg",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "Comunidad UAO, los invitamos a Raíces Doradas, una propuesta  experiencial donde el arte pictórico y textil se encuentran para darle vida a piezas indumentarias inspiradas en la exhuberancia ancestral de la cultura Calima. ",
-  "descripcionExtendida2": "En esta muestra cada prenda se convierte en un lienzo en movimiento y cada diseño es una historia que conecta el pasado con el presente. Además, será un espacio para habitar la historia con el cuerpo, sentir el color como memoria viva y descubrir nuevas formas de preservar lo que somos.  "
- },
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Comunidad.png" 
+},
  {
   "clase": "musica",
   "titulo": "Suspiros del viento",
@@ -257,11 +246,11 @@
   "fecha": "09/05/2025",
   "hora": "6:00 PM",
   "lugar": "Auditorio Yquinde",
-  "imagen3": "ES DE LA FECHA.png",
+  "imagen3": "Imagenes/Camara.png",
   "imagen1": " Imagenes/Viento.png",
-  "publico": "Evento para todo el público",
-  "descripcionExtendida1": "isfruta de una velada llena de música y arte, en la que podrás apreciar las interpretaciones de la orquesta de Cámara UAO. La cita es este 9 de mayo, en el auditorio Yquinde, a las 6:00 p.m.    "
- }
+  "imagen4": "Imagenes/General.png",
+  "imagen2": "Imagenes/Camara-UAO.png" 
+}
 ]
 
 
