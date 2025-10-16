@@ -4,32 +4,50 @@
   "titulo": "La UAO se mueve con la Carrera Atlética 2025",
   "descripcion": "Carrera de integración y bienestar en el campus UAO.",
   "fecha": "16/10/2025",
-  "hora": "8:00 AM a 12:00 PM",
-  "lugar": "Arco Central"
+  "hora": "8:00 AM",
+  "lugar": "Arco Central",
+  "imagen3": "Imagenes/Slide-evento-carrera-atletica.png",
+  "imagen2": "Imagenes/Slide-evento-carrera-atletica.png",
+  "imagen1": "Imagenes/Slide-evento-carrera-atletica.png",
+  "publico": "Evento pata todo el público",
+  "descripcionExtendida1": "La UAO invita a su Comunidad a ser parte de la Carrera Atlética UAO 2025, un espacio de encuentro, deporte y bienestar que recorrerá cada rincón del Campus.",
+  "descripcionExtendida2": "Para los participantes, la cita es el 16 de octubre, a las 8:00 a. m., con punto de encuentro en el Arco Central, donde iniciarán un calentamiento previo a la carrera.",
+  "descripcionExtendida3": "Por otro lado, al ser una actividad pensada para disfrutar en comunidad y vivir el espíritu UAO, quienes deseen alentar a los corredores, pueden ubicarse a lo largo de la Universidad a las 10:00 a. m. y participar por diversos premios.",
+  "descripcionExtendida4":"La actividad está abierta para estudiantes, profesores, colaboradores y egresados que quieran sumarse a esta jornada de integración y movimiento."
  },
  {
   "clase": "literatura",
   "titulo": "10º Encuentro de Clubes de Lectura",
   "descripcion": "Intercambio de experiencias sobre fomento a la lectura.",
   "fecha": "16/10/2025",
-  "hora": "8:30 AM a 4:00 PM",
-  "lugar": "Auditorio Xepia"
+  "hora": "8:30 AM",
+  "lugar": "Auditorio Xepia",
+  "imagen3": "Imagenes/Slide-evento-carrera-atletica.png",
+  "imagen2": "Imagenes/Slide-evento-carrera-atletica.png",
+  "imagen1": " Imagenes/DiseNo-sin-titulo.png",
+  "publico": "Evento pata todo el público",
+  "descripcionExtendida1": "La UAO invita a su Comunidad a ser parte de la Carrera Atlética UAO 2025, un espacio de encuentro, deporte y bienestar que recorrerá cada rincón del Campus.",
+  "descripcionExtendida2": "Para los participantes, la cita es el 16 de octubre, a las 8:00 a. m., con punto de encuentro en el Arco Central, donde iniciarán un calentamiento previo a la carrera.",
+  "descripcionExtendida3": "Por otro lado, al ser una actividad pensada para disfrutar en comunidad y vivir el espíritu UAO, quienes deseen alentar a los corredores, pueden ubicarse a lo largo de la Universidad a las 10:00 a. m. y participar por diversos premios.",
+  "descripcionExtendida4":"La actividad está abierta para estudiantes, profesores, colaboradores y egresados que quieran sumarse a esta jornada de integración y movimiento."
  },
  {
   "clase": "arte",
   "titulo": "Zentangles: arte que relaja e inspira",
   "descripcion": "Exposición de obras con la técnica Zentangle.",
-  "fecha": "09/09/2025 al 19/09/2025",
-  "hora": "8:00 AM a 5:30 PM",
-  "lugar": "CRAI"
+  "fecha": "09/09/2025",
+  "hora": "8:00 AM",
+  "lugar": "CRAI",
+  "imagen1": " Imagenes/Diseno-sin-titulo-1.png"
  },
  {
   "clase": "musica",
   "titulo": "¡La salsa vibra en la UAO!",
   "descripcion": "Concierto homenaje a Cheo Feliciano y Rubén Blades.",
   "fecha": "24/09/2025",
-  "hora": "6:00 PM a 7:00 PM",
-  "lugar": "Auditorio Quincha"
+  "hora": "6:00 PM",
+  "lugar": "Auditorio Quincha",
+  "imagen1": " Imagenes/Concierto-salsa.jpg"
  },
  {
   "clase": "literatura",
@@ -37,127 +55,143 @@
   "descripcion": "Taller en línea para compartir y disfrutar la lectura.",
   "fecha": "18/09/2025",
   "hora": "2:30 PM",
-  "lugar": "Modalidad virtual"
+  "lugar": "Modalidad virtual",
+  "imagen1": " Imagenes/LECTURA-ONLINE.png"
  },
  {
   "clase": "cultura",
   "titulo": "Café UAO: Día de Amor y Amistad",
   "descripcion": "Evento cultural con música, arte y convivencia.",
   "fecha": "17/09/2025",
-  "hora": "5:00 PM a 8:00 PM",
-  "lugar": "Centro Cultural y Deportivo UAO"
+  "hora": "5:00 PM",
+  "lugar": "Centro Cultural y Deportivo UAO",
+  "imagen1": " Imagenes/AMOR-Y-AMISTAD-CAFE-UAO.jpg"
  },
  {
   "clase": "cultura",
   "titulo": "Día Internacional de los Museos",
   "descripcion": "Jornada con arte, mapping y museo virtual.",
-  "fecha": "20/05/2025 al 23/05/2025",
-  "hora": "9:00 AM a 5:00 PM",
-  "lugar": "Museo Lili"
+  "fecha": "20/05/2025",
+  "hora": "9:00 AM",
+  "lugar": "Museo Lili",
+  "imagen1": " Imagenes/dia-internacional-de-los-museos.png"
  },
  {
   "clase": "baile",
   "titulo": "Festival de Colores y Sonidos",
   "descripcion": "Fusión de arte y música en vivo.",
   "fecha": "31/05/2025",
-  "hora": "10:00 AM a 12:00 PM",
-  "lugar": "Auditorio Xepia"
+  "hora": "10:00 AM",
+  "lugar": "Auditorio Xepia",
+  "imagen1": " Imagenes/3-1.png"
  },
  {
   "clase": "literatura",
   "titulo": "El Escritor al Aula",
   "descripcion": "Conversatorio con el autor Humberto Jarrín.",
   "fecha": "10/09/2025",
-  "hora": "3:30 PM a 5:30 PM",
-  "lugar": "Salón 3406"
+  "hora": "3:30 PM",
+  "lugar": "Salón 3406",
+  "imagen1": " Imagenes/UAO-3.png"
  },
  {
   "clase": "arte",
   "titulo": "Exposición fotográfica AVE",
   "descripcion": "Fotografías sobre sostenibilidad y ecología.",
   "fecha": "18/03/2025 al 07/04/2025",
-  "hora": "5:00 PM a 7:00 PM",
-  "lugar": "Sala de exposiciones CRAI"
+  "hora": "5:00 PM",
+  "lugar": "Sala de exposiciones CRAI",
+  "imagen1": " Imagenes/Proyecto-AVE.png"
  },
  {
   "clase": "cultura",
   "titulo": "Camina nuestra ciudad",
   "descripcion": "Recorrido urbano por monumentos de Cali.",
   "fecha": "23/03/2025",
-  "hora": "7:30 AM a 12:00 PM",
-  "lugar": "Parque de las Banderas"
+  "hora": "7:30 AM",
+  "lugar": "Parque de las Banderas",
+  "imagen1": " Imagenes/CIUDAD.png"
  },
  {
   "clase": "musica",
   "titulo": "Flow y versos: taller de freestyle",
   "descripcion": "Espacio para improvisar y crear rimas.",
   "fecha": "18/03/2025",
-  "hora": "12:00 PM a 1:30 PM",
-  "lugar": "Zona verde frente a la tienda UAO"
+  "hora": "12:00 PM",
+  "lugar": "Zona verde frente a la tienda UAO",
+  "imagen1": " Imagenes/Rap.png"
  },
  {
   "clase": "musica",
   "titulo": "Velada de música y café",
   "descripcion": "Café UAO con freestyle y música en vivo.",
   "fecha": "06/03/2025",
-  "hora": "4:00 PM a 8:30 PM",
-  "lugar": "Zona verde del Centro Cultural y Deportivo"
+  "hora": "4:00 PM",
+  "lugar": "Zona verde del Centro Cultural y Deportivo",
+  "imagen1": " Imagenes/VELADA.png"
  },
  {
   "clase": "cultura",
   "titulo": "Miércoles de ceniza",
   "descripcion": "Espacio de reflexión y eucaristía.",
   "fecha": "05/03/2025",
-  "hora": "10:00 AM a 1:30 PM",
-  "lugar": "Capilla UAO"
+  "hora": "10:00 AM",
+  "lugar": "Capilla UAO",
+  "imagen1": " Imagenes/ceniza.png"
  },
  {
   "clase": "cultura",
   "titulo": "Prográmate con Sexonomía",
   "descripcion": "Charlas y talleres sobre salud sexual.",
-  "fecha": "17/02/2025 al 21/02/2025",
-  "hora": "12:00 PM a 2:00 PM",
-  "lugar": "Aulas 4 Torreón 1"
+  "fecha": "17/02/2025",
+  "hora": "12:00 PM",
+  "lugar": "Aulas 4 Torreón 1",
+  "imagen1": " Imagenes/Y.png"
  },
  {
   "clase": "literatura",
   "titulo": "Antorcha Literaria",
   "descripcion": "Lectura de historias de terror y escritura colectiva.",
   "fecha": "31/10/2023",
-  "hora": "6:30 PM a 8:30 PM",
-  "lugar": "Zona verde del CAFS"
+  "hora": "6:30 PM",
+  "lugar": "Zona verde del CAFS",
+  "imagen1": " Imagenes/Antorcha.JPg"
  },
  {
   "clase": "cultura",
   "titulo": "Gamer’s Day",
   "descripcion": "Charlas y torneos sobre cultura gamer.",
   "fecha": "29/08/2022",
-  "hora": "10:00 AM a 5:00 PM",
-  "lugar": "Auditorio Yquinde"
+  "hora": "10:00 AM",
+  "lugar": "Auditorio Yquinde",
+  "imagen1": " Imagenes/Gamers.png"
  },
  {
   "clase": "literatura",
   "titulo": "Taller práctico de Mendeley",
   "descripcion": "Aprende a usar Mendeley para citar y referenciar.",
   "fecha": "19/08/2025",
-  "hora": "10:00 AM a 12:00 PM",
-  "lugar": "Salón Digicampus 1"
+  "hora": "10:00 AM",
+  "lugar": "Salón Digicampus 1",
+  "imagen1": " Imagenes/Medeley.png"
  },
  {
   "clase": "teatro",
   "titulo": "Raíces doradas",
   "descripcion": "Desfile de arte textil inspirado en la cultura Calima.",
   "fecha": "19/09/2025",
-  "hora": "6:00 PM a 7:00 PM",
-  "lugar": "Centro Cultural y Deportivo"
+  "hora": "6:00 PM",
+  "lugar": "Centro Cultural y Deportivo",
+  "imagen1": " Imagenes/Raices.jpg"
  },
  {
   "clase": "musica",
   "titulo": "Suspiros del viento",
   "descripcion": "Presentación de la Orquesta de Cámara UAO.",
   "fecha": "09/05/2025",
-  "hora": "6:00 PM a 8:00 PM",
-  "lugar": "Auditorio Yquinde"
+  "hora": "6:00 PM",
+  "lugar": "Auditorio Yquinde",
+  "imagen1": " Imagenes/Viento.png"
  }
 ]
 

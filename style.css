@@ -560,18 +560,28 @@ header .search-container .material-symbols-outlined {
 
 /* Imagen del evento */
 .filtered-event-card img {
-  width: 120px;
-  height: 130px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0; /* evita que se deforme con flex */
+  width: auto;
+  height: auto;
+  max-height: 200px;
+  border-radius: 12px;        /* bordes más suaves y visibles */
+  object-fit: scale-down;     /* mantiene proporciones sin recorte */
+  margin-top: -15px;          /* reduce espacio arriba */
+  margin-bottom: -15px;       /* reduce espacio abajo */
+  margin-left: -15px;         /* acerca al borde izquierdo */
+  margin-right: -15px;        /* acerca al borde derecho */
+  flex-shrink: 0;             /* evita deformaciones */
+  display: block;
 }
 
 /* Contenedor de texto */
 .filtered-event-card .event-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
+  justify-content: center;   /* centra verticalmente el texto dentro de su contenedor */
+  align-items: flex-start;   /* mantiene el texto alineado a la izquierda */
+  margin-left: -40px; 
+
 }
 
 /* Título */
@@ -597,7 +607,7 @@ header .search-container .material-symbols-outlined {
   margin: 0;
   font-size: 13px;
   font-weight: 500;
-  color: #6a1b9a;
+  color: #000000;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -812,15 +822,7 @@ header .search-container .material-symbols-outlined {
   border-color: #b30000 !important;
 }
 
-/*Celdas del calendario */
-.fc-daygrid-day {
-  border-radius: 1px;
-  transition: background-color 0.3s ease;
-}
 
-.fc-daygrid-day:hover {
-  background-color: #e91b1b18;
-}
 
 /* Cabecera de días (Lun, Mar, etc.)*/
 .fc-col-header-cell-cushion {
@@ -829,12 +831,12 @@ header .search-container .material-symbols-outlined {
   font-size: 0.8rem;
 }
 
-/* Oculta los textos en inglés que vienen por defecto */
-.fc-dayGridMonth-button .fc-button-label,
-.fc-timeGridWeek-button .fc-button-label,
-.fc-timeGridDay-button .fc-button-label,
-.fc-today-button .fc-button-label {
-  display: none;
+.fc .fc-daygrid-day.fc-day-today,
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-frame,
+.fc .fc-day-today .fc-daygrid-day-frame {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
 }
 
 
@@ -946,3 +948,82 @@ header .search-container .material-symbols-outlined {
 }
 
 
+/* === EVENTOS DESTACADOS DENTRO DEL PANEL DERECHO === */
+.right-featured-events {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px;
+}
+
+/* === RECUADRO DEL TÍTULO "EVENTOS DESTACADOS" === */
+.destacados-box {
+  background:
+    radial-gradient(circle at top left, rgba(253, 150, 150, 0.993), transparent 40%),
+    radial-gradient(circle at 60% 30%, rgba(250, 6, 6, 0.871), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(194, 26, 26, 0.782), transparent 70%),
+    radial-gradient(circle at bottom right, rgba(228, 48, 48, 0.859), transparent 60%),
+    radial-gradient(circle at 30% 80%, rgba(218, 59, 10, 0.858), transparent 70%),
+    rgba(255, 255, 255, 0.8); /* base translúcida */
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgb(191, 190, 190);
+  padding: 14px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.destacados-box .destacados-titulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* === TARJETA DESTACADA === */
+.featured-event-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.featured-event-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Imagen del evento */
+.featured-event-card img.featured-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texto dentro de la tarjeta */
+.featured-event-card .event-info {
+  padding: 12px;
+  background: #fff;
+}
+
+.featured-event-card .event-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.featured-event-card .event-description {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}

@@ -37,11 +37,7 @@
       </li>
     </ul>
     <hr>
-    <h3>Otros</h3>
     <ul>
-      <li class="drawer-item" data-target="configuracion">
-        <span class="material-symbols-outlined">settings</span> Configuración
-      </li>
     </ul>
   </nav>
 
@@ -96,42 +92,32 @@
         </div>
       </div>
 
-      <div class="scene" id="scene-configuracion">
-        <div class="dashboard">
-          <h1 class="scene-title">Configuración</h1>
-          <p class="scene-subtitle">Ajustes de la aplicación.</p>
-        </div>
-      </div>
-
 <!-- Panel derecho fijo -->
   <aside class="right-panel" id="right-panel">
-    <!-- Contenedor de imágenes -->
-    <div class="right-images">
-      <img src="Imagenes/Imagen1.jpg" alt="Imagen 1">
-      <img src="Imagenes/Imagen2.jpg" alt="Imagen 2">
-      <img src="Imagenes/Imagen3.jpg" alt="Imagen 3">
-      <img src="Imagenes/Imagen4.png" alt="Imagen 4">
-      <img src="Imagenes/Imagen5.png" alt="Imagen 5">
-      <!-- Agrega más imágenes según sea necesario -->
+    <div class="destacados-box">
+      <h3 class="destacados-titulo">Eventos destacados</h3>
     </div>
+    <div class="right-featured-events"></div>
   </aside>
 
 
-  <!-- Scripts -->
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/locales/es.global.min.js"></script>
 
 
+<!-- Librerías de FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/locales/es.global.min.js"></script>
 
-    <!-- === MODAL DE DETALLE DE EVENTO === -->
-  <div id="evento-modal" class="evento-modal">
-    <div class="evento-modal-content">
-      <span class="evento-modal-close">&times;</span>
-      <div id="evento-modal-body"></div>
-    </div>
+<!-- === MODAL DE DETALLE DE EVENTO === -->
+<div id="evento-modal" class="evento-modal">
+  <div class="evento-modal-content">
+    <span class="evento-modal-close">&times;</span>
+    <div id="evento-modal-body"></div>
   </div>
-  <script type="module" src="app.js"></script>
+</div>
+
+<!-- Carga los módulos -->
+<script type="module" src="./app.js"></script>
 
 
 </body>

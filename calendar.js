@@ -33,6 +33,7 @@ export function initCalendar(events = []) {
       ];
       // date.date.marker es usado en tu versión; lo dejamos como estaba
       const mes = meses[date.date.marker.getMonth()];
+      
       const año = date.date.marker.getFullYear();
       return `${mes.charAt(0).toUpperCase() + mes.slice(1)} ${año}`;
     },
@@ -70,19 +71,11 @@ export function initCalendar(events = []) {
       }
     })),
 
-    eventClick: function(info) {
-      const props = info.event.extendedProps;
+  eventClick: function(info) {
+    info.jsEvent.preventDefault(); // evita comportamiento por defecto
+    abrirModalEventoPorTitulo(info.event.title);
+  }
 
-      // Llenar el contenido del modal
-      const modalBody = document.getElementById('evento-modal-body');
-      if (modalBody) {
-        modalBody.innerHTML = ""
-      }
-
-      // Mostrar el modal (asegúrate de tener el HTML del modal en index.html)
-      const modal = document.getElementById('evento-modal');
-      if (modal) modal.style.display = 'flex';
-    }
   }); // <-- cierra new FullCalendar.Calendar(...)
 
   calendar.render();
