@@ -1,9 +1,11 @@
 // calendar.js
+// calendar.js
 export function initCalendar(events = []) {
   const container = document.querySelector('#scene-calendario .dashboard');
   if (!container) return;
 
-  // Crear contenedor
+  // Limpiar y crear contenedor
+  container.innerHTML = '';
   const calDiv = document.createElement('div');
   calDiv.id = 'uao-calendar';
   container.appendChild(calDiv);
@@ -31,9 +33,7 @@ export function initCalendar(events = []) {
         'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
         'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
       ];
-      // date.date.marker es usado en tu versión; lo dejamos como estaba
       const mes = meses[date.date.marker.getMonth()];
-      
       const año = date.date.marker.getFullYear();
       return `${mes.charAt(0).toUpperCase() + mes.slice(1)} ${año}`;
     },
@@ -41,7 +41,6 @@ export function initCalendar(events = []) {
       const dias = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
       return dias[arg.date.getUTCDay()];
     },
-
     eventContent: function(arg) {
       const hora = arg.event.extendedProps.hora || '';
       const titulo = arg.event.title || '';
@@ -56,33 +55,26 @@ export function initCalendar(events = []) {
 
       return { domNodes: [horaEl, tituloEl] };
     },
-
     eventDisplay: 'block',
     eventMinHeight: 50,
-
-    events: events.map(ev => ({
-      title: ev.titulo,
-      start: convertirFecha(ev.fecha, ev.hora),
-      extendedProps: {
-        hora: ev.hora,
-        descripcion: ev.descripcion,
-        lugar: ev.lugar,
-        clase: ev.clase
-      }
-    })),
-
-  eventClick: function(info) {
-    info.jsEvent.preventDefault(); // evita comportamiento por defecto
-    abrirModalEventoPorTitulo(info.event.title);
-  }
-
-  }); // <-- cierra new FullCalendar.Calendar(...)
+    events: events
+      .filter(ev => ev.titulo) // solo eventos que tengan título
+      .map(ev => ({
+        title: ev.titulo,
+        start: convertirFecha(ev.fecha, ev.hora),
+        extendedProps: {
+          hora: ev.hora || '',
+          fecha: ev.fecha || ''
+        }
+      }))
+  });
 
   calendar.render();
-} // <-- cierra export function initCalendar(...)
+}
 
-// Conversión dd/mm/yyyy → formato ISO
+// Conversión dd/mm/yyyy → ISO string
 function convertirFecha(fechaStr, horaStr = '00:00') {
+  if (!fechaStr) return new Date().toISOString(); // fallback
   const [d, m, y] = fechaStr.split('/');
   let [hora, periodo] = (horaStr || '').split(' ');
   let [h, min] = (hora || '0:00').split(':');

@@ -110,6 +110,7 @@ Promise.all([
 });
 
 // Renderizar eventos destacados
+// Renderizar eventos destacados
 function renderEventosDestacados() {
   const contenedor = document.querySelector('.right-featured-events');
   if (!contenedor) return;
@@ -132,12 +133,15 @@ function renderEventosDestacados() {
 
     // Abrir modal al hacer click en destacado
     card.addEventListener('click', () => {
+      // Si el evento no se encuentra por título, usar directamente el objeto
+      if (!evento.titulo) return;
       abrirModalEventoPorTitulo(evento.titulo);
     });
 
     contenedor.appendChild(card);
   });
 }
+
 
 // Renderizar tarjetas de filtro
 function renderFiltroCards() {
@@ -204,9 +208,14 @@ function renderEventos(lista, container = filteredContainer) {
 }
 
 // Búsqueda en vivo
+// Búsqueda en vivo con tolerancia a tildes y errores de ortografía
 const searchInput = document.querySelector(".search-container input");
 searchInput.addEventListener("input", e => {
-  const query = e.target.value.toLowerCase();
+  const query = e.target.value
+    .normalize('NFD') // elimina tildes
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+
   const activeScene = document.querySelector(".scene.active");
 
   let listaAFiltrar;
@@ -225,16 +234,25 @@ searchInput.addEventListener("input", e => {
     return;
   }
 
-  const filtrados = listaAFiltrar.filter(ev =>
-    ev.titulo.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(query) ||
-    ev.descripcion.toLowerCase().includes(query) ||
-    ev.fecha.toLowerCase().includes(query) ||
-    ev.hora.toLowerCase().includes(query) ||
-    ev.lugar.toLowerCase().includes(query)
-  );
+  const filtrados = listaAFiltrar.filter(ev => {
+    const titulo = ev.titulo ? ev.titulo.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() : '';
+    const descripcion = ev.descripcion ? ev.descripcion.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() : '';
+    const fecha = ev.fecha ? ev.fecha.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() : '';
+    const hora = ev.hora ? ev.hora.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() : '';
+    const lugar = ev.lugar ? ev.lugar.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() : '';
+
+    return (
+      titulo.includes(query) ||
+      descripcion.includes(query) ||
+      fecha.includes(query) ||
+      hora.includes(query) ||
+      lugar.includes(query)
+    );
+  });
 
   renderEventos(filtrados, container);
 });
+
 
 // Marcar favoritos
 filteredContainer.addEventListener("click", e => {
